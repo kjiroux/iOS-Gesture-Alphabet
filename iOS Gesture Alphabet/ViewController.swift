@@ -17,15 +17,18 @@ class ViewController: UIViewController {
     
     var motion = CMMotionManager()
     
-    override func viewDidLoad() {
+    override func viewDidLoad() 
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         myAccelerometer()
     }
     
-    
-    func myAccelerometer() {
+    // This function captures accelerometer data with the CoreMotionManager motion
+    // and Updates the UI to display the most recent accelerometer data.
+    func myAccelerometer() 
+    {
         motion.accelerometerUpdateInterval = 0.5
         
         motion.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
@@ -47,10 +50,11 @@ class ViewController: UIViewController {
 
 }
 
-extension Double {
-    // Rounds the double to decimal place value
-    
-    func rounded(toPlaces places:Int) -> Double {
+// Rounds the double to decimal place value
+extension Double 
+{
+    func rounded(toPlaces places:Int) -> Double 
+    {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }
