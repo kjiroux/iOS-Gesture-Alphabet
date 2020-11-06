@@ -1,0 +1,44 @@
+Oct 12  - Oct 23
+	All group participants met and began daily scrum by way of standup meetings at 9 AM PST / 1AM GMT+9. Not much development could be done aside from a simple test app as much of the team's time was devoted to trying to get MacOS to run properly in a VM, or to connect physical iOS devices to be able to test on. The team spent time clarifying group expectations, code styles, user stories, and met with the project partner Scott Fairbanks to assess first steps towards the overall application, as well as the overall scope of the project. By Oct 23, the team had a running application able to receive CoreMotion generated data from the phones sensors, and was able to test it on one physical device, an iPad Air.
+
+Oct 26
+Pablo: Did not receive MacInCloud access from School
+Kira: Working on developing small UI elements, Logo
+Joon: Received MacInCloud but needs updates
+Members also meet with TA Rogen George at 6:30 PM PST / 10:30 AM GMT+9.
+
+Oct 27  *Scrum meeting rescheduled for later in day w/ Project Partner due to technical difficulties*
+Pablo: No access to MacInCloud
+Kira: Milestone 2 progress
+Joon: MacInCloud working but slow
+Members also meet with Project Partner Scott Fairbanks at 5 PM PST / 9 AM GMT+9.
+
+Oct 28 *Rescheduled due to Joon becoming sick, and priorities from other classes needing to be complete*
+Pablo: Milestone 2 Progress
+Kira: Milestone 2 Progress
+Joon: Reinstalled macOS on MacBook, MacBook and Xcode work fine, but it was time-consuming. When I tried to run the app on my Ipad with Xcode, there are some issues (signing and compatibility)
+
+Oct 29
+Pablo: Access to MacInCloud, able to test data on physical device, but needs to reinstall OS. Discovered bug: position of text fields stretched to fit iPad device, but on iPhone device, causing problems. Data still retrieved.
+Kira: Tested additional sensor data, most notably DeviceMotion from CoreMotion library, and tested printing two different letters based on phones position.
+Joon: Created Process Flows
+
+Oct 30
+Pablo: Completing Milestone 2
+Kira: Branching to include additional sensor data retrieval, will need to be tested to ensure UI does not overlap and can fit for various devices with different screen resolutions
+Joon: -- absent, accidental
+
+Nov 02 - due to Daylight Savings, the group has decided that it would be best to change up their standup meeting time from everyday MTWThF to just MWF, and from 9AM PST (now 2 AM GMT+9) to be at their regularly scheduled meeting with Scott Fairbanks, at 6:30 PM PST (11:30AM PST) ALSO! We heard Joon’s voice today! Yay!!
+Pablo: Working on test app, morse code functionality having some issues
+Kira: Working on data retrieval screen, having trouble with elements overlapping
+Joon: Working on menu system to be able to move data from home screen
+
+Nov 04
+Pablo: Experiencing issues with processing power when developing :( contacted Scott to resolve this issue; otherwise, working on developing morse code test app
+Kira: Reworking the CoreMotion functionality into one before push
+Joon: Menu and resolution issues before CoreML implementation
+
+Nov 06
+Pablo:
+Kira:
+Joon:
