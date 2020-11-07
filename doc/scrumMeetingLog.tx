@@ -39,6 +39,6 @@ Kira: Reworking the CoreMotion functionality into one before push
 Joon: Menu and resolution issues before CoreML implementation
 
 Nov 06
-Pablo:
-Kira:
-Joon:
+Pablo: Followed up with Scott regarding MacInCloud, was given a solution that honestly is not viable in terms of testing. Otherwise, is working on Morse Code test app
+Kira: Compiled CoreMotion functionality into one function, fixed display; currently working on how to capture Accelerometer data from a start and end position, and calculating deltas. Will add in app icon images
+Joon: Complete Menu Structure, will encorporate completed CoreMotion functionality to new menu
