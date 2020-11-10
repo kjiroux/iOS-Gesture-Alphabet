@@ -42,3 +42,8 @@ Nov 06
 Pablo: Followed up with Scott regarding MacInCloud, was given a solution that honestly is not viable in terms of testing. Otherwise, is working on Morse Code test app
 Kira: Compiled CoreMotion functionality into one function, fixed display; currently working on how to capture Accelerometer data from a start and end position, and calculating deltas. Will add in app icon images
 Joon: Complete Menu Structure, will encorporate completed CoreMotion functionality to new menu
+
+Nov 09 - Clarified today that the app will focus more on being a physical app and possible API, rather than a keyboard extension
+Pablo: Progress on morse code app functionality, is  receiving short vs long press distinction; is having some UI trouble (able to type in text boxes (but not really), which makes you have to close everything and reopen again; additionally, display is different on device than on emulator)
+Kira: Progress on recording, is able to start receiving CoreMotion data at will, which terminates after a specific period of time; is having problems with code files, will no longer build; will have to wait to have things properly merged before getting repository again
+Joon: Implemented menu bar for all app pages, researching into coreML to convert motion data
