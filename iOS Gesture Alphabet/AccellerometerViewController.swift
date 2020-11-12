@@ -17,7 +17,6 @@ class AccellerometerViewController: UIViewController {
     @IBOutlet weak var touchOutput: UITextField!
     
     var motion = CMMotionManager()
-    var morseTimer = 0
     
     override func viewDidLoad()
     {
@@ -25,36 +24,6 @@ class AccellerometerViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         myAccelerometer()
-        self.touchOutput.text = "not-touch"
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-        morse()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5)
-        {
-            self.makeLong()
-        }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-        if (morseTimer == 0)
-        {
-            self.touchOutput.text = "short"
-        }
-        else if (morseTimer == 1)
-        {
-            self.touchOutput.text = "long"
-        }
-        else
-        {
-            self.touchOutput.text = "ERROR DETECTING INPUT"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2)
-        {
-            self.touchOutput.text = ""
-        }
     }
     
     
@@ -79,19 +48,6 @@ class AccellerometerViewController: UIViewController {
         
         }
     }
-
-    func makeLong()
-    {
-        morseTimer = 1
-    }
-    
-    // This function detects long and short taps
-    func morse()
-    {
-        morseTimer = 0
-        self.touchOutput.text = ""
-    }
-
 }
 
 // Rounds the double to decimal place value

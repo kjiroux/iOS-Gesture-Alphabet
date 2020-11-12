@@ -31,7 +31,6 @@ class AllViewController: UIViewController {
     @IBOutlet weak var touchOutput: UITextField!
     
     var motion = CMMotionManager()
-    var morseTimer_all = 0
     
     override func viewDidLoad()
     {
@@ -39,48 +38,8 @@ class AllViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         getCoreMotionData()
-        self.touchOutput.text = "not-touch"
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-        morse_all()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5)
-        {
-            self.makeLong_all()
-        }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-        if (morseTimer_all == 0)
-        {
-            self.touchOutput.text = "short"
-        }
-        else if (morseTimer_all == 1)
-        {
-            self.touchOutput.text = "long"
-        }
-        else
-        {
-            self.touchOutput.text = "ERROR DETECTING INPUT"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2)
-        {
-            self.touchOutput.text = ""
-        }
-    }
-    func makeLong_all()
-    {
-        morseTimer_all = 1
-    }
-    
-    // This function detects long and short taps
-    func morse_all()
-    {
-        morseTimer_all = 0
-        self.touchOutput.text = ""
-    }
+
     // This function captures accelerometer data with the CoreMotionManager motion
     // and Updates the UI to display the most recent accelerometer data.
     func getCoreMotionData()
