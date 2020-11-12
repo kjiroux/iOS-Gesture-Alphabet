@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AccellerometerViewController.swift
 //  iOS Gesture Alphabet
 //
 //  Created by Kira Jiroux on 10/19/20.
