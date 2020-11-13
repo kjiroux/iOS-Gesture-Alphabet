@@ -19,6 +19,7 @@
 		DBB1A0C625592483000F6559 /* DevicemotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0C525592483000F6559 /* DevicemotionViewController.swift */; };
 		DBB1A0CB25592CED000F6559 /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0CA25592CED000F6559 /* AllViewController.swift */; };
 		DBB1A0D425593A3B000F6559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB1A0D225593A3A000F6559 /* Main.storyboard */; };
+		DBB1A0F0255E62A6000F6559 /* MorseCodeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DBB1A0C525592483000F6559 /* DevicemotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicemotionViewController.swift; sourceTree = "<group>"; };
 		DBB1A0CA25592CED000F6559 /* AllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
 		DBB1A0D325593A3A000F6559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseCodeConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				DBB1A0C125592450000F6559 /* GyroscopeViewController.swift */,
 				DBB1A0C525592483000F6559 /* DevicemotionViewController.swift */,
 				DBB1A0CA25592CED000F6559 /* AllViewController.swift */,
+				DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */,
 			);
 			path = "iOS Gesture Alphabet";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */,
 				DBB1A0C625592483000F6559 /* DevicemotionViewController.swift in Sources */,
 				4F5404A1253DF9060046DDC7 /* SceneDelegate.swift in Sources */,
+				DBB1A0F0255E62A6000F6559 /* MorseCodeConverter.swift in Sources */,
 				DBB1A0AE25545F98000F6559 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
