@@ -54,7 +54,14 @@ class HomeViewController: UIViewController {
             self.present(vcName!, animated: true, completion: nil)
             // or we could put all stuffs from accelerometerviewcontroller.swift to show in one page
             // or segue
-
+        
+        case .morsecodeconverter:
+            let vcName = self.storyboard?.instantiateViewController(identifier: "MorseCodeConverter")
+            vcName?.modalTransitionStyle = .coverVertical
+            self.present(vcName!, animated: true, completion: nil)
+            // or we could put all stuffs from accelerometerviewcontroller.swift to show in one page
+            // or segue
+        
         case .alldata:
             let vcName = self.storyboard?.instantiateViewController(identifier: "AllViewController")
             vcName?.modalTransitionStyle = .coverVertical

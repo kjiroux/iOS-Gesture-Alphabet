@@ -12,6 +12,7 @@ enum MenuType: Int {
     case accellerometer
     case gyroscope
     case devicemotion
+    case morsecodeconverter
     case alldata
 }
 
