@@ -8,7 +8,7 @@
 import UIKit
 import CoreMotion
 
-class AllViewController: UIViewController {
+class ViewController: UIViewController {
 
     @IBOutlet weak var presenter: UITextField!
     
@@ -26,9 +26,6 @@ class AllViewController: UIViewController {
     @IBOutlet weak var xMotion: UITextField!
     @IBOutlet weak var yMotion: UITextField!
     @IBOutlet weak var zMotion: UITextField!
-    
-    //@IBOutlet weak var touchOutput: UITextField!
-    @IBOutlet weak var touchOutput: UITextField!
     
     var motion = CMMotionManager()
     
@@ -124,6 +121,18 @@ class AllViewController: UIViewController {
         }
         
         
+    }
+    
+}
+
+
+// Rounds the double to decimal place value
+extension Double
+{
+    func rounded(toPlaces places:Int) -> Double
+    {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
     }
     
 }

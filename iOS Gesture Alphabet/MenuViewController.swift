@@ -9,12 +9,14 @@ import UIKit
 
 enum MenuType: Int {
     case home
+    case alldata
+    case morsecodeconverter
+    /*
     case accellerometer
     case gyroscope
     case devicemotion
-    case morsecodeconverter
-    case alldata
-}
+     */
+ }
 
 class MenuViewController: UITableViewController {
 

@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		4F54049F253DF9060046DDC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F54049E253DF9060046DDC7 /* AppDelegate.swift */; };
 		4F5404A1253DF9060046DDC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5404A0253DF9060046DDC7 /* SceneDelegate.swift */; };
-		4F5404A3253DF9060046DDC7 /* AccellerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5404A2253DF9060046DDC7 /* AccellerometerViewController.swift */; };
+		4F5404A3253DF9060046DDC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5404A2253DF9060046DDC7 /* ViewController.swift */; };
 		4F5404A8253DF9070046DDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A7253DF9070046DDC7 /* Assets.xcassets */; };
 		4F5404AB253DF9070046DDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A9253DF9070046DDC7 /* LaunchScreen.storyboard */; };
 		DBB1A0AE25545F98000F6559 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0AD25545F98000F6559 /* MenuViewController.swift */; };
 		DBB1A0B225550E77000F6559 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B125550E77000F6559 /* HomeViewController.swift */; };
 		DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B525550E97000F6559 /* SlideInTransition.swift */; };
-		DBB1A0C225592450000F6559 /* GyroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0C125592450000F6559 /* GyroscopeViewController.swift */; };
-		DBB1A0C625592483000F6559 /* DevicemotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0C525592483000F6559 /* DevicemotionViewController.swift */; };
-		DBB1A0CB25592CED000F6559 /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0CA25592CED000F6559 /* AllViewController.swift */; };
 		DBB1A0D425593A3B000F6559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB1A0D225593A3A000F6559 /* Main.storyboard */; };
 		DBB1A0F0255E62A6000F6559 /* MorseCodeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */; };
 /* End PBXBuildFile section */
@@ -26,16 +23,13 @@
 		4F54049B253DF9060046DDC7 /* iOS Gesture Alphabet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Gesture Alphabet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F54049E253DF9060046DDC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F5404A0253DF9060046DDC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F5404A2253DF9060046DDC7 /* AccellerometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccellerometerViewController.swift; sourceTree = "<group>"; };
+		4F5404A2253DF9060046DDC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F5404A7253DF9070046DDC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5404AA253DF9070046DDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5404AC253DF9070046DDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBB1A0AD25545F98000F6559 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B125550E77000F6559 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B525550E97000F6559 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
-		DBB1A0C125592450000F6559 /* GyroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeViewController.swift; sourceTree = "<group>"; };
-		DBB1A0C525592483000F6559 /* DevicemotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicemotionViewController.swift; sourceTree = "<group>"; };
-		DBB1A0CA25592CED000F6559 /* AllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
 		DBB1A0D325593A3A000F6559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseCodeConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,16 +67,13 @@
 				DBB1A0D225593A3A000F6559 /* Main.storyboard */,
 				4F54049E253DF9060046DDC7 /* AppDelegate.swift */,
 				4F5404A0253DF9060046DDC7 /* SceneDelegate.swift */,
-				4F5404A2253DF9060046DDC7 /* AccellerometerViewController.swift */,
+				4F5404A2253DF9060046DDC7 /* ViewController.swift */,
 				DBB1A0B125550E77000F6559 /* HomeViewController.swift */,
 				4F5404A7253DF9070046DDC7 /* Assets.xcassets */,
 				4F5404A9253DF9070046DDC7 /* LaunchScreen.storyboard */,
 				4F5404AC253DF9070046DDC7 /* Info.plist */,
 				DBB1A0B525550E97000F6559 /* SlideInTransition.swift */,
 				DBB1A0AD25545F98000F6559 /* MenuViewController.swift */,
-				DBB1A0C125592450000F6559 /* GyroscopeViewController.swift */,
-				DBB1A0C525592483000F6559 /* DevicemotionViewController.swift */,
-				DBB1A0CA25592CED000F6559 /* AllViewController.swift */,
 				DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */,
 			);
 			path = "iOS Gesture Alphabet";
@@ -158,13 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBB1A0CB25592CED000F6559 /* AllViewController.swift in Sources */,
 				DBB1A0B225550E77000F6559 /* HomeViewController.swift in Sources */,
-				DBB1A0C225592450000F6559 /* GyroscopeViewController.swift in Sources */,
-				4F5404A3253DF9060046DDC7 /* AccellerometerViewController.swift in Sources */,
+				4F5404A3253DF9060046DDC7 /* ViewController.swift in Sources */,
 				4F54049F253DF9060046DDC7 /* AppDelegate.swift in Sources */,
 				DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */,
-				DBB1A0C625592483000F6559 /* DevicemotionViewController.swift in Sources */,
 				4F5404A1253DF9060046DDC7 /* SceneDelegate.swift in Sources */,
 				DBB1A0F0255E62A6000F6559 /* MorseCodeConverter.swift in Sources */,
 				DBB1A0AE25545F98000F6559 /* MenuViewController.swift in Sources */,
