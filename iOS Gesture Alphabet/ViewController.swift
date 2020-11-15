@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var zMotion: UITextField!
     
     var motion = CMMotionManager()
+    var reset = 0
     
     override func viewDidLoad()
     {
@@ -90,6 +91,22 @@ class ViewController: UIViewController {
                 self.xMotion.text = "Pitch: \(Double(mPitch).rounded(toPlaces: 3))"
                 self.yMotion.text = "Roll: \(Double(mRoll).rounded(toPlaces: 3))"
                 self.zMotion.text = "Yaw: \(Double(mYaw).rounded(toPlaces: 3))"
+                
+                if (-0.5 < mRoll && 0.5 > mRoll)
+                {
+                    self.reset = 0
+                }
+                
+                if (self.reset == 0 && -0.5 > mRoll)
+                {
+                    self.presenter.text = "short"
+                    self.reset = 1
+                }
+                else if (self.reset == 0 && 0.5 < mRoll)
+                {
+                    self.presenter.text = "long"
+                    self.reset = 1
+                }
             
                 /*
                  if mRoll < 0.5 && mRoll > -0.5 {
