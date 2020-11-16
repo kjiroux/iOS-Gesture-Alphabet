@@ -51,13 +51,33 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         self.view.addSubview(self.textField_letter)
     }
     
-    
+    // one morsecode to one letter
+    /*
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         var letters = ""
         letters += textField_letter.text!
         
         textField_letter.text = morseToString(textField.text!)
+        letters += textField_letter.text!
+
+        textField_letter.text = letters
+        print("Before convertion \((textField.text) ?? "Empty")")
+        print("After convertion \((textField_letter.text) ?? "Empty")")
+        textField.resignFirstResponder()
+        
+        
+        return true
+    }
+     */
+    
+    // morse codes to letters
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        var letters = ""
+        letters += textField_letter.text!
+        
+        textField_letter.text = morsestringsToString(textField.text!)
         letters += textField_letter.text!
 
         textField_letter.text = letters
@@ -111,6 +131,7 @@ let morseToLetter = [
     " ": " ",
 ]
 
+// one morsecode to one letter
 func morseToString(_ input: String) -> String {
     var returnChar = morseToLetter[String(input)]
     if returnChar == nil {
@@ -119,3 +140,20 @@ func morseToString(_ input: String) -> String {
     return returnChar!
 }
 
+
+
+// A string of morsecodes to letters (between space of each)
+func morsestringsToString(_ input: String) -> String
+{
+    var returnString = ""
+    let strings = input.components(separatedBy: " ")
+    
+    for onestring in strings
+    {
+        let returnChar = morseToLetter[String(onestring)]!
+        returnString += returnChar + " "
+    }
+    
+    return returnString
+    
+}
