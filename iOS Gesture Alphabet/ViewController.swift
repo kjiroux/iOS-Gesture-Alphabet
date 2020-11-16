@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // Fixes issue where dark mode causes text to be invisible. PLEASE INCLUDE ON EVERY PAGE
+        overrideUserInterfaceStyle = .light
         getCoreMotionData()
     }
 
