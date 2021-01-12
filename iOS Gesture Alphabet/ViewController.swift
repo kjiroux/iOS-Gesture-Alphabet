@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var zMotion: UITextField!
     
     var motion = CMMotionManager()
-    var reset = 0
+    var hReset = 0
+    var vReset = 0
     
     // Variable for determining horizontal direction
     // Left is 0, middle is 1, right is 2
@@ -105,37 +106,41 @@ class ViewController: UIViewController {
                 self.zMotion.text = "Yaw: \(Double(mYaw).rounded(toPlaces: 3))"
                 
                 // In the middle
-                if (-0.5 < mRoll && 0.5 > mRoll && -0.5 < mPitch && 0.5 > mPitch)
+                if (-0.5 < mRoll && 0.5 > mRoll)
                 {
-                    self.reset = 0
+                    self.hReset = 0
                     self.horizontalMotion = 1
+                }
+                if (-0.5 < mPitch && 0.5 > mPitch)
+                {
+                    self.vReset = 0
                     self.verticalMotion = 1
                 }
                 
                 // Left
-                if (self.reset == 0 && -0.5 > mRoll)
+                if (self.hReset == 0 && -0.5 > mRoll)
                 {
-                    self.reset = 1
+                    self.hReset = 1
                     self.horizontalMotion = 0
                 }
                 // Right
-                else if (self.reset == 0 && 0.5 < mRoll)
+                else if (self.hReset == 0 && 0.5 < mRoll)
                 {
-                    self.reset = 1
+                    self.hReset = 1
                     self.horizontalMotion = 2
                 }
             
-                // Down
-                if (self.reset == 0 && -0.5 > mPitch)
-                {
-                    self.reset = 1
-                    self.verticalMotion = 0
-                }
                 // Up
-                else if (self.reset == 0 && 0.5 < mPitch)
+                if (self.vReset == 0 && -0.5 > mPitch)
                 {
-                    self.reset = 1
+                    self.vReset = 1
                     self.verticalMotion = 2
+                }
+                // Down
+                else if (self.vReset == 0 && 0.5 < mPitch)
+                {
+                    self.vReset = 1
+                    self.verticalMotion = 0
                 }
                 
                 // Here is where we print what values we are getting
