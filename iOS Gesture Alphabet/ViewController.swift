@@ -30,6 +30,16 @@ class ViewController: UIViewController {
     var motion = CMMotionManager()
     var reset = 0
     
+    // Variable for determining horizontal direction
+    // Left is 0, middle is 1, right is 2
+    // Perhaps using an enum would be better instead?
+    var horizontalMotion = -1
+    
+    // Variable for determining vertical direction
+    // Up is 0, middle is 1, down is 2
+    // Perhaps using an enum would be better instead?
+    var verticalMotion = -1
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -94,48 +104,77 @@ class ViewController: UIViewController {
                 self.yMotion.text = "Roll: \(Double(mRoll).rounded(toPlaces: 3))"
                 self.zMotion.text = "Yaw: \(Double(mYaw).rounded(toPlaces: 3))"
                 
-                if (-0.5 < mRoll && 0.5 > mRoll)
+                // In the middle
+                if (-0.5 < mRoll && 0.5 > mRoll && -0.5 < mPitch && 0.5 > mPitch)
                 {
                     self.reset = 0
+                    self.horizontalMotion = 1
+                    self.verticalMotion = 1
                 }
                 
+                // Left
                 if (self.reset == 0 && -0.5 > mRoll)
                 {
-                    self.presenter.text = "short"
                     self.reset = 1
+                    self.horizontalMotion = 0
                 }
+                // Right
                 else if (self.reset == 0 && 0.5 < mRoll)
                 {
-                    self.presenter.text = "long"
                     self.reset = 1
+                    self.horizontalMotion = 2
                 }
             
-                /*
-                 if mRoll < 0.5 && mRoll > -0.5 {
-                    self.presenter.text = ""
+                // Down
+                if (self.reset == 0 && -0.5 > mPitch)
+                {
+                    self.reset = 1
+                    self.verticalMotion = 0
                 }
-                 if (mPitch > 1.0) {
-                    if mRoll > 1.3 {
-                        self.presenter.text = "A"
-                        print("A")
-                    }
-                    else if mRoll < -1.2 {
-                        self.presenter.text = "B"
-                        print("B")
-                    }
+                // Up
+                else if (self.reset == 0 && 0.5 < mPitch)
+                {
+                    self.reset = 1
+                    self.verticalMotion = 2
                 }
-                else if (mPitch > -0.5 && mPitch < 0.5){
-                    if mRoll > 1.3 {
-                        self.presenter.text = "C"
-                        print("C")
-                    }
-                    else if mRoll < -1.2 {
-                        self.presenter.text = "D"
-                        print("D")
-                    }
-                }
-                 */
                 
+                // Here is where we print what values we are getting
+                if (self.horizontalMotion == 0 && self.verticalMotion == 0)
+                {
+                    self.presenter.text = "bottom left"
+                }
+                else if (self.horizontalMotion == 0 && self.verticalMotion == 1)
+                {
+                    self.presenter.text = "left"
+                }
+                else if (self.horizontalMotion == 0 && self.verticalMotion == 2)
+                {
+                    self.presenter.text = "top left"
+                }
+                else if (self.horizontalMotion == 1 && self.verticalMotion == 0)
+                {
+                    self.presenter.text = "bottom"
+                }
+                else if (self.horizontalMotion == 1 && self.verticalMotion == 1)
+                {
+                    self.presenter.text = "middle"
+                }
+                else if (self.horizontalMotion == 1 && self.verticalMotion == 2)
+                {
+                    self.presenter.text = "top"
+                }
+                else if (self.horizontalMotion == 2 && self.verticalMotion == 0)
+                {
+                    self.presenter.text = "bottom right"
+                }
+                else if (self.horizontalMotion == 2 && self.verticalMotion == 1)
+                {
+                    self.presenter.text = "right"
+                }
+                else if (self.horizontalMotion == 2 && self.verticalMotion == 2)
+                {
+                    self.presenter.text = "top right"
+                }
             }
         }
         
