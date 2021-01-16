@@ -8,6 +8,18 @@
 import UIKit
 import CoreMotion
 
+struct GestureCapture {
+    //var pitch = ""
+    var rollDir = ""   // roll
+    //var yaw = ""
+}
+
+struct AccelCapture {
+    var xAccel = 0.0
+    var yAccel = 0.0
+    var zAccel = 0.0
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var presenter: UITextField!
@@ -28,6 +40,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var zMotion: UITextField!
     
     var motion = CMMotionManager()
+
     var hReset = 0
     var vReset = 0
     
@@ -40,24 +53,78 @@ class ViewController: UIViewController {
     // Up is 0, middle is 1, down is 2
     // Perhaps using an enum would be better instead?
     var verticalMotion = -1
+
+    var onSwitch = false
+    var gestureCapture: [GestureCapture] = []
+    var accelCapture: [AccelCapture] = []
+    
+    let updateInterval = 0.25
+
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+
         // Fixes issue where dark mode causes text to be invisible. PLEASE INCLUDE ON EVERY PAGE
         overrideUserInterfaceStyle = .light
-        getCoreMotionData()
+
     }
 
+    // This is in direct relation to the button and when it is hit. onSwitch is
+    // a boolean variable which determines if CoreMotion data should be started,
+    // as well as clears the gestureCapture array before getting started.
+    @IBAction func recordButton(_ sender: UIButton) {
+        
+        onSwitch = !onSwitch
+        
+        if (onSwitch == true) {
+            print("Switch On.")
+            accelCapture = []
+            gestureCapture = []
+            getCoreMotionData()
+        }
+        else {
+            switchOff()
+        }
+    }
+    
+    
+    // This function turns off all CoreMotion updates after the button has been
+    // hit again, and currently prints out the corresponding gesture information
+    // that has been captured.
+    func switchOff() {
+        print("")
+        print("Switch off.")
+        
+        onSwitch = false
+        motion.stopAccelerometerUpdates()
+        motion.stopGyroUpdates()
+        motion.stopDeviceMotionUpdates()
+        
+        print("_____________________________________________")
+        print("Printing Results:")
+
+        /*
+        for gesture in gestureCapture {
+            print(gesture.rollDir)
+        }
+ */
+        for value in accelCapture {
+            print("X: \(value.xAccel) | Y: \(value.yAccel) | Z: \(value.zAccel)")
+        }
+        
+    }
+    
+    
     // This function captures accelerometer data with the CoreMotionManager motion
     // and Updates the UI to display the most recent accelerometer data.
     func getCoreMotionData()
     {
-        motion.accelerometerUpdateInterval = 0.5
-        motion.gyroUpdateInterval = 0.5
-        motion.deviceMotionUpdateInterval = 0.5
+        motion.accelerometerUpdateInterval = updateInterval
+        motion.gyroUpdateInterval = updateInterval
+        motion.deviceMotionUpdateInterval = updateInterval
         
         // Accelerometer
         motion.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
@@ -71,6 +138,9 @@ class ViewController: UIViewController {
                 self.xAccel.text = "x: \(Double(x))"
                 self.yAccel.text = "y: \(Double(y))"
                 self.zAccel.text = "z: \(Double(z))"
+                
+                self.accelCapture.append(AccelCapture(xAccel: x.rounded(toPlaces: 9), yAccel: y.rounded(toPlaces: 9), zAccel: z.rounded(toPlaces: 9)))
+                
             }
         
         }
@@ -105,6 +175,7 @@ class ViewController: UIViewController {
                 self.yMotion.text = "Roll: \(Double(mRoll).rounded(toPlaces: 3))"
                 self.zMotion.text = "Yaw: \(Double(mYaw).rounded(toPlaces: 3))"
                 
+
                 // In the middle
                 if (-0.5 < mRoll && 0.5 > mRoll)
                 {
@@ -120,14 +191,18 @@ class ViewController: UIViewController {
                 // Left
                 if (self.hReset == 0 && -0.5 > mRoll)
                 {
+
                     self.hReset = 1
                     self.horizontalMotion = 0
+
                 }
                 // Right
                 else if (self.hReset == 0 && 0.5 < mRoll)
                 {
+
                     self.hReset = 1
                     self.horizontalMotion = 2
+
                 }
             
                 // Up

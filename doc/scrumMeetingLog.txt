@@ -47,3 +47,24 @@ Nov 09 - Clarified today that the app will focus more on being a physical app an
 Pablo: Progress on morse code app functionality, is  receiving short vs long press distinction; is having some UI trouble (able to type in text boxes (but not really), which makes you have to close everything and reopen again; additionally, display is different on device than on emulator)
 Kira: Progress on recording, is able to start receiving CoreMotion data at will, which terminates after a specific period of time; is having problems with code files, will no longer build; will have to wait to have things properly merged before getting repository again
 Joon: Implemented menu bar for all app pages, researching into coreML to convert motion data
+
+Nov 11
+Kira - Looking through branches, struct for start and end capture as of rn only start and end and create array of struct
+Joon - Creating a release branch, making morse code algorithm
+Pablo - Creating without touches
+
+Nov 16
+Kira - Adding data to arrays
+Joon - Merging branches, getting morse code algorithm done adding space and return button instead of using keyboard
+Pablo - Morse without touches
+
+Nov 18
+Kira - Investigating open source Github repository for gesture recognition
+Joon - Working on presentation and will work on mapping 7 directions to letters/digits and one for space.
+Pablo - Working on presentation and design for more than two directions using pitch and roll
+
+Nov 23
+All - Investigating new GitHub repository that has a gesture recognition. Sprint review and sprint planning.
+
+Nov 30
+All - Meeting with Scott to discuss plans for Winter term. Over the break begin putting the new GitHub repository onto iOS devices and investigate how the project works so that we can take it over and improve it.
