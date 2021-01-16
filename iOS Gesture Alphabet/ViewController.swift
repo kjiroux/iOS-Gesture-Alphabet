@@ -40,12 +40,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var zMotion: UITextField!
     
     var motion = CMMotionManager()
-    var reset = 0
+
+    var hReset = 0
+    var vReset = 0
+    
+    // Variable for determining horizontal direction
+    // Left is 0, middle is 1, right is 2
+    // Perhaps using an enum would be better instead?
+    var horizontalMotion = -1
+    
+    // Variable for determining vertical direction
+    // Up is 0, middle is 1, down is 2
+    // Perhaps using an enum would be better instead?
+    var verticalMotion = -1
+
     var onSwitch = false
     var gestureCapture: [GestureCapture] = []
     var accelCapture: [AccelCapture] = []
     
     let updateInterval = 0.25
+
     
     override func viewDidLoad()
     {
@@ -161,62 +175,86 @@ class ViewController: UIViewController {
                 self.yMotion.text = "Roll: \(Double(mRoll).rounded(toPlaces: 3))"
                 self.zMotion.text = "Yaw: \(Double(mYaw).rounded(toPlaces: 3))"
                 
-                
-                
-                
+
+                // In the middle
                 if (-0.5 < mRoll && 0.5 > mRoll)
                 {
-                    self.reset = 0
-                    
-                    //self.gestureCapture.append(GestureCapture(dir: "_"))
+                    self.hReset = 0
+                    self.horizontalMotion = 1
+                }
+                if (-0.5 < mPitch && 0.5 > mPitch)
+                {
+                    self.vReset = 0
+                    self.verticalMotion = 1
                 }
                 
-                if (self.reset == 0 && -0.5 > mRoll)
+                // Left
+                if (self.hReset == 0 && -0.5 > mRoll)
                 {
-                    self.presenter.text = "short"
-                    self.reset = 1
-                    self.gestureCapture.append(GestureCapture(rollDir: "short"))
+
+                    self.hReset = 1
+                    self.horizontalMotion = 0
+
                 }
-                else if (self.reset == 0 && 0.5 < mRoll)
+                // Right
+                else if (self.hReset == 0 && 0.5 < mRoll)
                 {
-                    self.presenter.text = "long"
-                    self.reset = 1
-                    
-                    self.gestureCapture.append(GestureCapture(rollDir: "long"))
-                    
-                }
-                else if (self.reset == 0 && 1.0 < mPitch) {
-                    self.presenter.text = "_"
-                    self.reset = 1
-                    self.gestureCapture.append(GestureCapture(rollDir: "_"))
+
+                    self.hReset = 1
+                    self.horizontalMotion = 2
+
                 }
             
-                /*
-                 if mRoll < 0.5 && mRoll > -0.5 {
-                    self.presenter.text = ""
+                // Up
+                if (self.vReset == 0 && -0.5 > mPitch)
+                {
+                    self.vReset = 1
+                    self.verticalMotion = 2
                 }
-                 if (mPitch > 1.0) {
-                    if mRoll > 1.3 {
-                        self.presenter.text = "A"
-                        print("A")
-                    }
-                    else if mRoll < -1.2 {
-                        self.presenter.text = "B"
-                        print("B")
-                    }
+                // Down
+                else if (self.vReset == 0 && 0.5 < mPitch)
+                {
+                    self.vReset = 1
+                    self.verticalMotion = 0
                 }
-                else if (mPitch > -0.5 && mPitch < 0.5){
-                    if mRoll > 1.3 {
-                        self.presenter.text = "C"
-                        print("C")
-                    }
-                    else if mRoll < -1.2 {
-                        self.presenter.text = "D"
-                        print("D")
-                    }
-                }
-                 */
                 
+                // Here is where we print what values we are getting
+                if (self.horizontalMotion == 0 && self.verticalMotion == 0)
+                {
+                    self.presenter.text = "bottom left"
+                }
+                else if (self.horizontalMotion == 0 && self.verticalMotion == 1)
+                {
+                    self.presenter.text = "left"
+                }
+                else if (self.horizontalMotion == 0 && self.verticalMotion == 2)
+                {
+                    self.presenter.text = "top left"
+                }
+                else if (self.horizontalMotion == 1 && self.verticalMotion == 0)
+                {
+                    self.presenter.text = "bottom"
+                }
+                else if (self.horizontalMotion == 1 && self.verticalMotion == 1)
+                {
+                    self.presenter.text = "middle"
+                }
+                else if (self.horizontalMotion == 1 && self.verticalMotion == 2)
+                {
+                    self.presenter.text = "top"
+                }
+                else if (self.horizontalMotion == 2 && self.verticalMotion == 0)
+                {
+                    self.presenter.text = "bottom right"
+                }
+                else if (self.horizontalMotion == 2 && self.verticalMotion == 1)
+                {
+                    self.presenter.text = "right"
+                }
+                else if (self.horizontalMotion == 2 && self.verticalMotion == 2)
+                {
+                    self.presenter.text = "top right"
+                }
             }
         }
         
