@@ -14,6 +14,12 @@ struct GestureCapture {
     //var yaw = ""
 }
 
+struct AccelCapture {
+    var xAccel = 0.0
+    var yAccel = 0.0
+    var zAccel = 0.0
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var presenter: UITextField!
@@ -37,6 +43,9 @@ class ViewController: UIViewController {
     var reset = 0
     var onSwitch = false
     var gestureCapture: [GestureCapture] = []
+    var accelCapture: [AccelCapture] = []
+    
+    let updateInterval = 0.25
     
     override func viewDidLoad()
     {
@@ -54,6 +63,7 @@ class ViewController: UIViewController {
         
         if (onSwitch == true) {
             print("Switch On.")
+            accelCapture = []
             gestureCapture = []
             getCoreMotionData()
         }
@@ -78,10 +88,14 @@ class ViewController: UIViewController {
         print("_____________________________________________")
         print("Printing Results:")
 
+        /*
         for gesture in gestureCapture {
             print(gesture.rollDir)
         }
-        
+ */
+        for value in accelCapture {
+            print("X: \(value.xAccel) | Y: \(value.yAccel) | Z: \(value.zAccel)")
+        }
         
     }
     
@@ -90,9 +104,9 @@ class ViewController: UIViewController {
     // and Updates the UI to display the most recent accelerometer data.
     func getCoreMotionData()
     {
-        motion.accelerometerUpdateInterval = 0.5
-        motion.gyroUpdateInterval = 0.5
-        motion.deviceMotionUpdateInterval = 0.5
+        motion.accelerometerUpdateInterval = updateInterval
+        motion.gyroUpdateInterval = updateInterval
+        motion.deviceMotionUpdateInterval = updateInterval
         
         // Accelerometer
         motion.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
@@ -106,6 +120,9 @@ class ViewController: UIViewController {
                 self.xAccel.text = "x: \(Double(x))"
                 self.yAccel.text = "y: \(Double(y))"
                 self.zAccel.text = "z: \(Double(z))"
+                
+                self.accelCapture.append(AccelCapture(xAccel: x.rounded(toPlaces: 9), yAccel: y.rounded(toPlaces: 9), zAccel: z.rounded(toPlaces: 9)))
+                
             }
         
         }
