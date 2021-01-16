@@ -52,6 +52,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+
+        // Fixes issue where dark mode causes text to be invisible. PLEASE INCLUDE ON EVERY PAGE
+        overrideUserInterfaceStyle = .light
+
     }
 
     // This is in direct relation to the button and when it is hit. onSwitch is

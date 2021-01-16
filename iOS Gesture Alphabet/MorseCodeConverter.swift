@@ -47,6 +47,9 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Fixes issue where dark mode causes text to be invisible. PLEASE INCLUDE ON EVERY PAGE
+        overrideUserInterfaceStyle = .light
+        
         self.view.addSubview(self.textField)
         self.view.addSubview(self.textField_letter)
     }

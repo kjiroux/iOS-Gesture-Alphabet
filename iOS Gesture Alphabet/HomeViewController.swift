@@ -15,6 +15,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Fixes issue where dark mode causes text to be invisible. PLEASE INCLUDE ON EVERY PAGE
+        overrideUserInterfaceStyle = .light
     }
 
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
