@@ -234,7 +234,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 }
                 else if (self.horizontalMotion == 0 && self.verticalMotion == 1)
                 {
-                    self.presenter.text = "M" // left (x = -0.99 / y = 0.007 / z = -0.12)
+                    self.presenter.text = "left" // left(M) (x = -0.99 / y = 0.007 / z = -0.12)
                                             // need upper middle side and lower middle side
                     // N
                     // O
@@ -339,6 +339,8 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         return textField_letter
     }()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -348,10 +350,13 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         //self.view.addSubview(self.textField)
         self.view.addSubview(self.textField_letter)
         
+        
         // long press button
         let longbutton = UILongPressGestureRecognizer(target: self, action: #selector(readinggesture(press:)))
-        longbutton.minimumPressDuration = 1.0
+        longbutton.minimumPressDuration = 0.5
         self.view.addGestureRecognizer(longbutton)
+        
+        
     }
     
     //dupicated value remove
@@ -388,6 +393,14 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             {
                 return "A"
             }
+            else if array[0] == "bottom_left"
+            {
+                return "D"
+            }
+            else if array[0] == "bottom_right"
+            {
+                return "G"
+            }
         }
         else if array.count == 2
         {
@@ -399,15 +412,28 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             {
                 return "C"
             }
+            else if array[0] == "bottom_left" && array[1] == "bottom"
+            {
+                return "E"
+            }
+            else if array[0] == "bottom_left" && array[1] == "left"
+            {
+                return "F"
+            }
+            else if array[0] == "bottom_right" && array[1] == "bottom"
+            {
+                return "H"
+            }
+            else if array[0] == "bottom_right" && array[1] == "right"
+            {
+                return "I"
+            }
         }
-        return "err"
+        return " "
     }
     
-    // alter action
-    let alert = UIAlertController(title: "Longpress", message: "Success", preferredStyle: UIAlertController.Style.alert)
-    let okaction = UIAlertAction(title: "OK", style: .default) { (action) in }
     
-    
+
     //record and reading gesture (Not working)
     @objc func readinggesture(press:UILongPressGestureRecognizer)
     {
@@ -422,6 +448,14 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             //storing gesture!!
             print("begin")
             recordedgesture.append(self.presenter.text!)
+            // timerbegin()
+        }
+        
+        if press.state == .changed
+        {
+            print("changed")
+            recordedgesture.append(self.presenter.text!)
+            
         }
         
         if press.state == .ended
