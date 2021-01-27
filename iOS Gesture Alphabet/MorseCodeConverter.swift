@@ -4,6 +4,55 @@
 //
 //  Created by Youngjoo Lee on 2020/11/13.
 //
+/*
+* Motion Data Gesture Alphabet
+* Record motion data while touching the screen
+* Print letter after releasing from the screen.
+* More data: branch name= gestureconverter
+* IMPORTANT: Positions that already visited will be ignored 
+(e.g: bottom->bottom_left->bottom  == bottom->bottom_left) (the second "bottom" is ignored.) 
+
+A: bottom
+B: bottom -> bottom_left
+C: bottom -> bottom_right
+D: bottom_left
+E: bottom_left -> left
+F: bottom_left -> bottom
+G: left
+H: left -> bottom_left
+I: left -> top_left
+J: top_left
+K: top_left -> left
+L: top_left -> top
+M: top
+N: top -> top_left
+O: top -> top_right
+P: top_right
+Q: top_right -> top
+R: top_right -> right
+S: right
+T: right -> top_right
+U: right -> bottom_right
+V: bottom_right
+W: bottom_right -> right
+X: bottom_right -> bottom
+Y: bottom -> bottom_left -> bottom_right
+Z: bottom -> bottom_right -> bottom_left
+
+space: middle
+
+0: middle -> bottom
+1: middle -> bottom_left
+2: middle -> left
+3: middle -> top_left
+4: middle -> top
+5: middle -> top_right
+6: middle -> right
+7: middle -> bottom_right
+8: middle -> bottom -> bottom_left
+9: middle -> bottom -> bottom_right
+*/
+
 
 import UIKit
 import CoreMotion
@@ -242,7 +291,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 }
                 else if (self.horizontalMotion == 0 && self.verticalMotion == 2)
                 {
-                    self.presenter.text = "top left" // top_left (x = -0.80 / y = 0.52 / z = -0.048) (left side)
+                    self.presenter.text = "top_left" // top_left (x = -0.80 / y = 0.52 / z = -0.048) (left side)
                     // ~ (x = -0.11 / y = 1.00 / z = -0.11) (top side)
                 }
                 else if (self.horizontalMotion == 1 && self.verticalMotion == 0)
@@ -292,7 +341,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 }
                 else if (self.horizontalMotion == 2 && self.verticalMotion == 2)
                 {
-                    self.presenter.text = "top right" // top_right (
+                    self.presenter.text = "top_right" // top_right (
                 }
                 
             }
@@ -397,9 +446,33 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             {
                 return "D"
             }
-            else if array[0] == "bottom_right"
+            else if array[0] == "left"
             {
                 return "G"
+            }
+            else if array[0] == "top_left"
+            {
+                return "J"
+            }
+            else if array[0] == "top"
+            {
+                return "M"
+            }
+            else if array[0] == "top_right"
+            {
+                return "P"
+            }
+            else if array[0] == "right"
+            {
+                return "S"
+            }
+            else if array[0] == "bottom_right"
+            {
+                return "V"
+            }
+            else if array[0] == "middle"
+            {
+                return " "
             }
         }
         else if array.count == 2
@@ -412,21 +485,113 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             {
                 return "C"
             }
-            else if array[0] == "bottom_left" && array[1] == "bottom"
+            else if array[0] == "bottom_left" && array[1] == "left"
             {
                 return "E"
             }
-            else if array[0] == "bottom_left" && array[1] == "left"
+            else if array[0] == "bottom_left" && array[1] == "bottom"
             {
                 return "F"
             }
-            else if array[0] == "bottom_right" && array[1] == "bottom"
+            else if array[0] == "left" && array[1] == "top_left"
             {
                 return "H"
             }
-            else if array[0] == "bottom_right" && array[1] == "right"
+            else if array[0] == "left" && array[1] == "bottom_left"
             {
                 return "I"
+            }
+            else if array[0] == "top_left" && array[1] == "left"
+            {
+                return "K"
+            }
+            else if array[0] == "top_left" && array[1] == "top"
+            {
+                return "L"
+            }
+            else if array[0] == "top" && array[1] == "top_left"
+            {
+                return "N"
+            }
+            else if array[0] == "top" && array[1] == "top_right"
+            {
+                return "O"
+            }
+            else if array[0] == "top_right" && array[1] == "top"
+            {
+                return "Q"
+            }
+            else if array[0] == "top_right" && array[1] == "right"
+            {
+                return "R"
+            }
+            else if array[0] == "right" && array[1] == "top_right"
+            {
+                return "T"
+            }
+            else if array[0] == "right" && array[1] == "bottom_right"
+            {
+                return "U"
+            }
+            else if array[0] == "bottom_right" && array[1] == "right"
+            {
+                return "W"
+            }
+            else if array[0] == "bottom_right" && array[1] == "bottom"
+            {
+                return "X"
+            }
+            else if array[0] == "middle" && array[1] == "bottom"
+            {
+                return "0"
+            }
+            else if array[0] == "middle" && array[1] == "bottom_left"
+            {
+                return "1"
+            }
+            else if array[0] == "middle" && array[1] == "left"
+            {
+                return "2"
+            }
+            else if array[0] == "middle" && array[1] == "top_left"
+            {
+                return "3"
+            }
+            else if array[0] == "middle" && array[1] == "top"
+            {
+                return "4"
+            }
+            else if array[0] == "middle" && array[1] == "top_right"
+            {
+                return "5"
+            }
+            else if array[0] == "middle" && array[1] == "right"
+            {
+                return "6"
+            }
+            else if array[0] == "middle" && array[1] == "bottom_right"
+            {
+                return "7"
+            }
+
+        }
+        else if array.count == 3
+        {
+            if array[0] == "bottom" && array[1] == "bottom_left" && array[2] == "bottom_right"
+            {
+                return "Y"
+            }
+            else if array[0] == "bottom" && array[1] == "bottom_right" && array[2] == "bottom_left"
+            {
+                return "Z"
+            }
+            else if array[0] == "middle" && array[1] == "bottom" && array[2] == "bottom_left"
+            {
+                return "8"
+            }
+            else if array[0] == "middle" && array[1] == "bottom" && array[2] == "bottom_right"
+            {
+                return "9"
             }
         }
         return " "
