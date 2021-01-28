@@ -23,6 +23,7 @@ struct AccelCapture {
 class ViewController: UIViewController {
 
     @IBOutlet weak var presenter: UITextField!
+    weak var morsebox:  UITextField!
     
     // Accelerometer
     @IBOutlet weak var xAccel: UITextField!
@@ -57,6 +58,9 @@ class ViewController: UIViewController {
     var onSwitch = false
     var gestureCapture: [GestureCapture] = []
     var accelCapture: [AccelCapture] = []
+    
+    // data (gesture capture) storing
+    var captureddata = ""
     
     let updateInterval = 0.25
 
@@ -262,6 +266,7 @@ class ViewController: UIViewController {
     }
     
 }
+
 
 
 // Rounds the double to decimal place value
