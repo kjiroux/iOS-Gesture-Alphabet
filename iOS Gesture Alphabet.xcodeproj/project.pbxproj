@@ -442,7 +442,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3.iOS-Gesture-Keyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -462,7 +462,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3.iOS-Gesture-Keyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

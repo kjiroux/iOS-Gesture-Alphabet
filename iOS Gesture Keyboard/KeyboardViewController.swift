@@ -33,6 +33,17 @@ class KeyboardViewController: UIInputViewController {
         
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        
+        let recordButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        recordButton.backgroundColor = .green
+        recordButton.setTitle("Record Button", for: .normal)
+        recordButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        
+        self.view.addSubview(recordButton)
+        
+        
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -57,4 +68,12 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
 
+    
+    // Record Button Functionality
+    @objc func buttonPressed(sender: UIButton!) {
+        
+        print("Hit button")
+    }
+    
+    
 }
