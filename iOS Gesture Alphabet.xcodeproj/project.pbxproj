@@ -12,12 +12,38 @@
 		4F5404A3253DF9060046DDC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5404A2253DF9060046DDC7 /* ViewController.swift */; };
 		4F5404A8253DF9070046DDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A7253DF9070046DDC7 /* Assets.xcassets */; };
 		4F5404AB253DF9070046DDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A9253DF9070046DDC7 /* LaunchScreen.storyboard */; };
+		4F70B7D925E97A2100A67AD1 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F70B7D825E97A2100A67AD1 /* KeyboardViewController.swift */; };
+		4F70B7DD25E97A2100A67AD1 /* iOS Gesture Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4F70B7D625E97A2000A67AD1 /* iOS Gesture Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DBB1A0AE25545F98000F6559 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0AD25545F98000F6559 /* MenuViewController.swift */; };
 		DBB1A0B225550E77000F6559 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B125550E77000F6559 /* HomeViewController.swift */; };
 		DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B525550E97000F6559 /* SlideInTransition.swift */; };
 		DBB1A0D425593A3B000F6559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB1A0D225593A3A000F6559 /* Main.storyboard */; };
 		DBB1A0F0255E62A6000F6559 /* MorseCodeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F70B7DB25E97A2100A67AD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F540493253DF9060046DDC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F70B7D525E97A2000A67AD1;
+			remoteInfo = "iOS Gesture Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F70B7DE25E97A2100A67AD1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4F70B7DD25E97A2100A67AD1 /* iOS Gesture Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F54049B253DF9060046DDC7 /* iOS Gesture Alphabet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Gesture Alphabet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +53,9 @@
 		4F5404A7253DF9070046DDC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5404AA253DF9070046DDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5404AC253DF9070046DDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F70B7D625E97A2000A67AD1 /* iOS Gesture Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iOS Gesture Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F70B7D825E97A2100A67AD1 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		4F70B7DA25E97A2100A67AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBB1A0AD25545F98000F6559 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B125550E77000F6559 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B525550E97000F6559 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
@@ -42,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F70B7D325E97A2000A67AD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				4F54049D253DF9060046DDC7 /* iOS Gesture Alphabet */,
+				4F70B7D725E97A2000A67AD1 /* iOS Gesture Keyboard */,
 				4F54049C253DF9060046DDC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4F54049B253DF9060046DDC7 /* iOS Gesture Alphabet.app */,
+				4F70B7D625E97A2000A67AD1 /* iOS Gesture Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +117,15 @@
 			path = "iOS Gesture Alphabet";
 			sourceTree = "<group>";
 		};
+		4F70B7D725E97A2000A67AD1 /* iOS Gesture Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4F70B7D825E97A2100A67AD1 /* KeyboardViewController.swift */,
+				4F70B7DA25E97A2100A67AD1 /* Info.plist */,
+			);
+			path = "iOS Gesture Keyboard";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +136,34 @@
 				4F540497253DF9060046DDC7 /* Sources */,
 				4F540498253DF9060046DDC7 /* Frameworks */,
 				4F540499253DF9060046DDC7 /* Resources */,
+				4F70B7DE25E97A2100A67AD1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4F70B7DC25E97A2100A67AD1 /* PBXTargetDependency */,
 			);
 			name = "iOS Gesture Alphabet";
 			productName = "iOS Gesture Alphabet";
 			productReference = 4F54049B253DF9060046DDC7 /* iOS Gesture Alphabet.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4F70B7D525E97A2000A67AD1 /* iOS Gesture Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F70B7E125E97A2100A67AD1 /* Build configuration list for PBXNativeTarget "iOS Gesture Keyboard" */;
+			buildPhases = (
+				4F70B7D225E97A2000A67AD1 /* Sources */,
+				4F70B7D325E97A2000A67AD1 /* Frameworks */,
+				4F70B7D425E97A2000A67AD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Gesture Keyboard";
+			productName = "iOS Gesture Keyboard";
+			productReference = 4F70B7D625E97A2000A67AD1 /* iOS Gesture Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,11 +171,14 @@
 		4F540493253DF9060046DDC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					4F54049A253DF9060046DDC7 = {
 						CreatedOnToolsVersion = 12.0.1;
+					};
+					4F70B7D525E97A2000A67AD1 = {
+						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
@@ -127,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				4F54049A253DF9060046DDC7 /* iOS Gesture Alphabet */,
+				4F70B7D525E97A2000A67AD1 /* iOS Gesture Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +209,13 @@
 				DBB1A0D425593A3B000F6559 /* Main.storyboard in Resources */,
 				4F5404AB253DF9070046DDC7 /* LaunchScreen.storyboard in Resources */,
 				4F5404A8253DF9070046DDC7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F70B7D425E97A2000A67AD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +236,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F70B7D225E97A2000A67AD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F70B7D925E97A2100A67AD1 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F70B7DC25E97A2100A67AD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F70B7D525E97A2000A67AD1 /* iOS Gesture Keyboard */;
+			targetProxy = 4F70B7DB25E97A2100A67AD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4F5404A9253DF9070046DDC7 /* LaunchScreen.storyboard */ = {
@@ -300,16 +393,17 @@
 		4F5404B0253DF9070046DDC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2QR85T6QY4;
+				DEVELOPMENT_TEAM = AJH2KG358H;
 				INFOPLIST_FILE = "iOS Gesture Alphabet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K2";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,17 +413,58 @@
 		4F5404B1253DF9070046DDC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2QR85T6QY4;
+				DEVELOPMENT_TEAM = AJH2KG358H;
 				INFOPLIST_FILE = "iOS Gesture Alphabet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K2";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F70B7DF25E97A2100A67AD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJH2KG358H;
+				INFOPLIST_FILE = "iOS Gesture Keyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3.iOS-Gesture-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F70B7E025E97A2100A67AD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJH2KG358H;
+				INFOPLIST_FILE = "iOS Gesture Keyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K3.iOS-Gesture-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,6 +487,15 @@
 			buildConfigurations = (
 				4F5404B0253DF9070046DDC7 /* Debug */,
 				4F5404B1253DF9070046DDC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F70B7E125E97A2100A67AD1 /* Build configuration list for PBXNativeTarget "iOS Gesture Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F70B7DF25E97A2100A67AD1 /* Debug */,
+				4F70B7E025E97A2100A67AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
