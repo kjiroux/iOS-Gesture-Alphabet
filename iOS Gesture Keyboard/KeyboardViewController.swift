@@ -72,7 +72,7 @@ class KeyboardViewController: UIInputViewController {
     // Record Button Functionality
     @objc func buttonPressed(sender: UIButton!) {
         
-        print("Hit button")
+        print("Let's Record!")
     }
     
     
