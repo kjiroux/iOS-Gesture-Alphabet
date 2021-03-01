@@ -17,7 +17,34 @@
 		DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B525550E97000F6559 /* SlideInTransition.swift */; };
 		DBB1A0D425593A3B000F6559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB1A0D225593A3A000F6559 /* Main.storyboard */; };
 		DBB1A0F0255E62A6000F6559 /* MorseCodeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */; };
+		DBE32BC025ECB813002ADCA8 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32BBF25ECB813002ADCA8 /* KeyboardViewController.swift */; };
+		DBE32BC425ECB813002ADCA8 /* CustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBE32BBD25ECB813002ADCA8 /* CustomKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DBE32BCC25ECB84E002ADCA8 /* KeyboardStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE32BCB25ECB84E002ADCA8 /* KeyboardStoryboard.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBE32BC225ECB813002ADCA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F540493253DF9060046DDC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBE32BBC25ECB813002ADCA8;
+			remoteInfo = CustomKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBE32BC525ECB813002ADCA8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DBE32BC425ECB813002ADCA8 /* CustomKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F54049B253DF9060046DDC7 /* iOS Gesture Alphabet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Gesture Alphabet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +59,21 @@
 		DBB1A0B525550E97000F6559 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		DBB1A0D325593A3A000F6559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseCodeConverter.swift; sourceTree = "<group>"; };
+		DBE32BBD25ECB813002ADCA8 /* CustomKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE32BBF25ECB813002ADCA8 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		DBE32BC125ECB813002ADCA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBE32BCB25ECB84E002ADCA8 /* KeyboardStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeyboardStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4F540498253DF9060046DDC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE32BBA25ECB813002ADCA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				4F54049D253DF9060046DDC7 /* iOS Gesture Alphabet */,
+				DBE32BBE25ECB813002ADCA8 /* CustomKeyboard */,
 				4F54049C253DF9060046DDC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4F54049B253DF9060046DDC7 /* iOS Gesture Alphabet.app */,
+				DBE32BBD25ECB813002ADCA8 /* CustomKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +119,16 @@
 			path = "iOS Gesture Alphabet";
 			sourceTree = "<group>";
 		};
+		DBE32BBE25ECB813002ADCA8 /* CustomKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DBE32BBF25ECB813002ADCA8 /* KeyboardViewController.swift */,
+				DBE32BC125ECB813002ADCA8 /* Info.plist */,
+				DBE32BCB25ECB84E002ADCA8 /* KeyboardStoryboard.storyboard */,
+			);
+			path = CustomKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +139,34 @@
 				4F540497253DF9060046DDC7 /* Sources */,
 				4F540498253DF9060046DDC7 /* Frameworks */,
 				4F540499253DF9060046DDC7 /* Resources */,
+				DBE32BC525ECB813002ADCA8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DBE32BC325ECB813002ADCA8 /* PBXTargetDependency */,
 			);
 			name = "iOS Gesture Alphabet";
 			productName = "iOS Gesture Alphabet";
 			productReference = 4F54049B253DF9060046DDC7 /* iOS Gesture Alphabet.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DBE32BBC25ECB813002ADCA8 /* CustomKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE32BC825ECB813002ADCA8 /* Build configuration list for PBXNativeTarget "CustomKeyboard" */;
+			buildPhases = (
+				DBE32BB925ECB813002ADCA8 /* Sources */,
+				DBE32BBA25ECB813002ADCA8 /* Frameworks */,
+				DBE32BBB25ECB813002ADCA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomKeyboard;
+			productName = CustomKeyboard;
+			productReference = DBE32BBD25ECB813002ADCA8 /* CustomKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,11 +174,14 @@
 		4F540493253DF9060046DDC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					4F54049A253DF9060046DDC7 = {
 						CreatedOnToolsVersion = 12.0.1;
+					};
+					DBE32BBC25ECB813002ADCA8 = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
@@ -127,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				4F54049A253DF9060046DDC7 /* iOS Gesture Alphabet */,
+				DBE32BBC25ECB813002ADCA8 /* CustomKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +212,14 @@
 				DBB1A0D425593A3B000F6559 /* Main.storyboard in Resources */,
 				4F5404AB253DF9070046DDC7 /* LaunchScreen.storyboard in Resources */,
 				4F5404A8253DF9070046DDC7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE32BBB25ECB813002ADCA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE32BCC25ECB84E002ADCA8 /* KeyboardStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +240,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBE32BB925ECB813002ADCA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE32BC025ECB813002ADCA8 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBE32BC325ECB813002ADCA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBE32BBC25ECB813002ADCA8 /* CustomKeyboard */;
+			targetProxy = DBE32BC225ECB813002ADCA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4F5404A9253DF9070046DDC7 /* LaunchScreen.storyboard */ = {
@@ -300,6 +397,7 @@
 		4F5404B0253DF9070046DDC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +417,7 @@
 		4F5404B1253DF9070046DDC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +429,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBE32BC625ECB813002ADCA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2QR85T6QY4;
+				INFOPLIST_FILE = CustomKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K2.CustomKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBE32BC725ECB813002ADCA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2QR85T6QY4;
+				INFOPLIST_FILE = CustomKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K2.CustomKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,6 +491,15 @@
 			buildConfigurations = (
 				4F5404B0253DF9070046DDC7 /* Debug */,
 				4F5404B1253DF9070046DDC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE32BC825ECB813002ADCA8 /* Build configuration list for PBXNativeTarget "CustomKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE32BC625ECB813002ADCA8 /* Debug */,
+				DBE32BC725ECB813002ADCA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
