@@ -25,7 +25,7 @@ def main():
 
     letter = sys.argv[1]
     
-    mainFile = "rawData/Cap_" + letter + ".csv"
+    mainFile = letter + ".csv"
     f = open(mainFile, 'r')
     text = f.read()
     f.close()
@@ -40,11 +40,11 @@ def main():
         fileName = ""
         # do train stuff first
         if i < 15:
-            fileName = "train/capital" + letter + "/" + letter + str(i) + ".csv"
+            fileName = "train/" + letter + "/" + letter + str(i) + ".csv"
 
         # do test stuff second
         else:
-            fileName = "test/capital" + letter + "/" + letter + str(i % 15) + ".csv"
+            fileName = "test/" + letter + "/" + letter + str(i % 15) + ".csv"
 
         newFile = open(fileName, 'a')
         newFile.write(text)
