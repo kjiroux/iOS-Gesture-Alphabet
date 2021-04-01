@@ -130,6 +130,7 @@ class ViewController: UIViewController {
         motion.gyroUpdateInterval = updateInterval
         motion.deviceMotionUpdateInterval = updateInterval
         
+        
         // Accelerometer
         motion.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
             print(data as Any)
@@ -138,17 +139,18 @@ class ViewController: UIViewController {
                 let x = trueData.acceleration.x
                 let y = trueData.acceleration.y
                 let z = trueData.acceleration.z
-            
+            /*
                 self.xAccel.text = "x: \(Double(x))"
                 self.yAccel.text = "y: \(Double(y))"
                 self.zAccel.text = "z: \(Double(z))"
                 
                 self.accelCapture.append(AccelCapture(xAccel: x.rounded(toPlaces: 9), yAccel: y.rounded(toPlaces: 9), zAccel: z.rounded(toPlaces: 9)))
-                
+                */
             }
         
         }
         
+        /*
         // Gyroscope
         motion.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
             print(data as Any)
@@ -164,6 +166,8 @@ class ViewController: UIViewController {
                 
             }
         }
+        
+ */
         
         // Device Motion; Pitch, Roll, Yaw
         motion.startDeviceMotionUpdates(to: OperationQueue.current!) { (data, error)
