@@ -12,6 +12,7 @@
 		4F5404A3253DF9060046DDC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5404A2253DF9060046DDC7 /* ViewController.swift */; };
 		4F5404A8253DF9070046DDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A7253DF9070046DDC7 /* Assets.xcassets */; };
 		4F5404AB253DF9070046DDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A9253DF9070046DDC7 /* LaunchScreen.storyboard */; };
+		B7FFBE0826181CEF001A33EC /* MLModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B7FFBE0726181CEF001A33EC /* MLModel.mlmodel */; };
 		DBB1A0AE25545F98000F6559 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0AD25545F98000F6559 /* MenuViewController.swift */; };
 		DBB1A0B225550E77000F6559 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B125550E77000F6559 /* HomeViewController.swift */; };
 		DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B525550E97000F6559 /* SlideInTransition.swift */; };
@@ -27,6 +28,7 @@
 		4F5404A7253DF9070046DDC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5404AA253DF9070046DDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5404AC253DF9070046DDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FFBE0726181CEF001A33EC /* MLModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MLModel.mlmodel; path = ../../MLModel.mlmodel; sourceTree = "<group>"; };
 		DBB1A0AD25545F98000F6559 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B125550E77000F6559 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B525550E97000F6559 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				4F5404AC253DF9070046DDC7 /* Info.plist */,
 				DBB1A0B525550E97000F6559 /* SlideInTransition.swift */,
 				DBB1A0AD25545F98000F6559 /* MenuViewController.swift */,
+				B7FFBE0726181CEF001A33EC /* MLModel.mlmodel */,
 				DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */,
 			);
 			path = "iOS Gesture Alphabet";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB1A0B225550E77000F6559 /* HomeViewController.swift in Sources */,
+				B7FFBE0826181CEF001A33EC /* MLModel.mlmodel in Sources */,
 				4F5404A3253DF9060046DDC7 /* ViewController.swift in Sources */,
 				4F54049F253DF9060046DDC7 /* AppDelegate.swift in Sources */,
 				DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */,
