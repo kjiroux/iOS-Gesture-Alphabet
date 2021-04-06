@@ -25,17 +25,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var presenter: UITextField!
     weak var morsebox:  UITextField!
     
+    /*
     // Accelerometer
-    @IBOutlet weak var xAccel: UITextField!
-    @IBOutlet weak var yAccel: UITextField!
-    @IBOutlet weak var zAccel: UITextField!
+    //@IBOutlet weak var xAccel: UITextField!
+    //@IBOutlet weak var yAccel: UITextField!
+    //@IBOutlet weak var zAccel: UITextField!
+    
+    
     
     // Gyroscope
     @IBOutlet weak var xGyro: UITextField!
     @IBOutlet weak var yGyro: UITextField!
     @IBOutlet weak var zGyro: UITextField!
     
-    // Device Motion
+    */
+    
+    // Accelerometer Motion Output
     @IBOutlet weak var xMotion: UITextField!
     @IBOutlet weak var yMotion: UITextField!
     @IBOutlet weak var zMotion: UITextField!
@@ -110,11 +115,8 @@ class ViewController: UIViewController {
         print("_____________________________________________")
         print("Printing Results:")
 
-        /*
-        for gesture in gestureCapture {
-            print(gesture.rollDir)
-        }
- */
+        // Here is where we'll need to include some sort of storage functionality
+        
         for value in accelCapture {
             print("X: \(value.xAccel) | Y: \(value.yAccel) | Z: \(value.zAccel)")
         }
@@ -139,35 +141,18 @@ class ViewController: UIViewController {
                 let x = trueData.acceleration.x
                 let y = trueData.acceleration.y
                 let z = trueData.acceleration.z
-            /*
-                self.xAccel.text = "x: \(Double(x))"
-                self.yAccel.text = "y: \(Double(y))"
-                self.zAccel.text = "z: \(Double(z))"
-                
+            
+                self.xMotion.text = "x: \(Double(x))"
+                self.yMotion.text = "y: \(Double(y))"
+                self.zMotion.text = "z: \(Double(z))"
+            
                 self.accelCapture.append(AccelCapture(xAccel: x.rounded(toPlaces: 9), yAccel: y.rounded(toPlaces: 9), zAccel: z.rounded(toPlaces: 9)))
-                */
+                
             }
         
         }
         
-        /*
-        // Gyroscope
-        motion.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
-            print(data as Any)
-            if let trueData = data {
-                self.view.reloadInputViews()
-                let x = trueData.rotationRate.x
-                let y = trueData.rotationRate.y
-                let z = trueData.rotationRate.z
-                
-                self.xGyro.text = "x: \(Double(x).rounded(toPlaces: 3))"
-                self.yGyro.text = "y: \(Double(y).rounded(toPlaces: 3))"
-                self.zGyro.text = "z: \(Double(z).rounded(toPlaces: 3))"
-                
-            }
-        }
-        
- */
+       
         
         // Device Motion; Pitch, Roll, Yaw
         motion.startDeviceMotionUpdates(to: OperationQueue.current!) { (data, error)
@@ -179,10 +164,11 @@ class ViewController: UIViewController {
                 let mRoll  = trueData.attitude.roll
                 let mYaw   = trueData.attitude.yaw
                 
+                /*
                 self.xMotion.text = "Pitch: \(Double(mPitch).rounded(toPlaces: 3))"
                 self.yMotion.text = "Roll: \(Double(mRoll).rounded(toPlaces: 3))"
                 self.zMotion.text = "Yaw: \(Double(mYaw).rounded(toPlaces: 3))"
-                
+                */
 
                 // In the middle
                 if (-0.5 < mRoll && 0.5 > mRoll)

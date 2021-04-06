@@ -17,71 +17,90 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iOS Gesture Alphabet Background" translatesAutoresizingMaskIntoConstraints="NO" id="AGD-wp-EPP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AsF-yD-IpY">
-                                <rect key="frame" x="32" y="312" width="350" height="360"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="dYw-34-an5">
+                                <rect key="frame" x="32" y="44" width="350" height="726"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Scott Fairbanks" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="fal-YM-o4C">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="350" id="4id-n1-T0X"/>
-                                            <constraint firstAttribute="height" constant="90" id="olF-Kb-Iup"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pablo Moreno" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="vab-Xu-pkv">
-                                        <rect key="frame" x="0.0" y="90" width="350" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="fHN-vh-NUg"/>
-                                            <constraint firstAttribute="width" constant="350" id="gOH-vN-AKR"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kira Jiroux" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="ciJ-lP-qx7">
-                                        <rect key="frame" x="0.0" y="180" width="350" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="Fkh-U1-SVu"/>
-                                            <constraint firstAttribute="width" constant="350" id="dpM-9U-Dgw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Youngjoo Lee" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="9IB-Dn-WSV">
-                                        <rect key="frame" x="0.0" y="270" width="350" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="QZI-D2-9ub"/>
-                                            <constraint firstAttribute="width" constant="350" id="i70-gb-UJj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Da0-Of-B7P">
-                                <rect key="frame" x="32" y="80" width="350" height="180"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Team 35" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="uOd-Xs-RCA">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="1qq-Pk-QKG"/>
-                                            <constraint firstAttribute="width" constant="350" id="bvD-15-fAO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="iOS Gesture Alphabet" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="voQ-fJ-Oox">
-                                        <rect key="frame" x="0.0" y="90" width="350" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="YGZ-Zy-RJH"/>
                                             <constraint firstAttribute="width" constant="350" id="lzY-mk-Ga1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="35"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iOS Gesture Alphabet Logo Transparent" highlightedImage="iOS Gesture Alphabet Logo Transparent" translatesAutoresizingMaskIntoConstraints="NO" id="4I6-cZ-cpX">
+                                        <rect key="frame" x="0.0" y="125" width="350" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="SoE-RS-RYI"/>
+                                            <constraint firstAttribute="width" constant="350" id="cZ2-RM-rHf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vn3-US-FpP">
+                                        <rect key="frame" x="0.0" y="510" width="350" height="216"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Team 35" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="uOd-Xs-RCA">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="1qq-Pk-QKG"/>
+                                                    <constraint firstAttribute="width" constant="350" id="bvD-15-fAO"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Team 35">
+                                                        <attributes>
+                                                            <color key="NSColor" systemColor="labelColor"/>
+                                                            <font key="NSFont" size="30" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pablo Moreno" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="vab-Xu-pkv">
+                                                <rect key="frame" x="0.0" y="36" width="350" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="fHN-vh-NUg"/>
+                                                    <constraint firstAttribute="width" constant="350" id="gOH-vN-AKR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kira Jiroux" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="ciJ-lP-qx7">
+                                                <rect key="frame" x="0.0" y="96" width="350" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Fkh-U1-SVu"/>
+                                                    <constraint firstAttribute="width" constant="350" id="dpM-9U-Dgw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Youngjoo Lee" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="9IB-Dn-WSV">
+                                                <rect key="frame" x="0.0" y="156" width="350" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="QZI-D2-9ub"/>
+                                                    <constraint firstAttribute="width" constant="350" id="i70-gb-UJj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AlBayan" family="Al Bayan" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ciJ-lP-qx7" firstAttribute="top" secondItem="vab-Xu-pkv" secondAttribute="bottom" id="NHH-ld-8di"/>
+                                            <constraint firstItem="9IB-Dn-WSV" firstAttribute="top" secondItem="ciJ-lP-qx7" secondAttribute="bottom" id="P0a-Fh-PIR"/>
+                                            <constraint firstItem="vab-Xu-pkv" firstAttribute="top" secondItem="uOd-Xs-RCA" secondAttribute="bottom" id="SNf-wO-Sf8"/>
+                                            <constraint firstItem="uOd-Xs-RCA" firstAttribute="top" secondItem="Vn3-US-FpP" secondAttribute="top" id="SdC-Pi-gM8"/>
+                                            <constraint firstItem="vab-Xu-pkv" firstAttribute="top" secondItem="uOd-Xs-RCA" secondAttribute="bottom" id="WQZ-Xo-WCl"/>
+                                            <constraint firstItem="ciJ-lP-qx7" firstAttribute="top" secondItem="vab-Xu-pkv" secondAttribute="bottom" id="cgu-fS-cDK"/>
+                                            <constraint firstItem="9IB-Dn-WSV" firstAttribute="top" secondItem="ciJ-lP-qx7" secondAttribute="bottom" id="j0t-a4-Wik"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vn3-US-FpP" firstAttribute="top" secondItem="4I6-cZ-cpX" secondAttribute="bottom" constant="35" id="umi-V7-dBO"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,12 +109,11 @@
                             <constraint firstItem="AGD-wp-EPP" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="1aA-0O-VVt"/>
                             <constraint firstItem="AGD-wp-EPP" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="1ob-Ya-oJm"/>
                             <constraint firstItem="AGD-wp-EPP" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="3DC-Qw-DYW"/>
-                            <constraint firstItem="Da0-Of-B7P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="EBA-Xi-80E"/>
-                            <constraint firstItem="AsF-yD-IpY" firstAttribute="top" secondItem="Da0-Of-B7P" secondAttribute="bottom" constant="52" id="MdY-do-FWz"/>
-                            <constraint firstItem="AsF-yD-IpY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="d2O-0h-Id9"/>
-                            <constraint firstItem="AsF-yD-IpY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hYC-ny-4ms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dYw-34-an5" secondAttribute="trailing" constant="32" id="L8E-iu-BAV"/>
+                            <constraint firstItem="dYw-34-an5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YaY-EC-X1k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dYw-34-an5" secondAttribute="bottom" constant="38" id="rG8-wo-OdB"/>
                             <constraint firstAttribute="bottom" secondItem="AGD-wp-EPP" secondAttribute="bottom" id="u8m-g9-jTe"/>
-                            <constraint firstItem="AsF-yD-IpY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uAe-m3-QiY"/>
+                            <constraint firstItem="dYw-34-an5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="w6l-NH-1Xx"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -106,6 +124,10 @@
     </scenes>
     <resources>
         <image name="iOS Gesture Alphabet Background" width="500" height="500"/>
+        <image name="iOS Gesture Alphabet Logo Transparent" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
