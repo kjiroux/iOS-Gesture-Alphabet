@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJR-ag-rGZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJR-ag-rGZ">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,11 +38,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ats-c9-50f">
-                                                <rect key="frame" x="20" y="316.33333333333331" width="137" height="40"/>
+                                                <rect key="frame" x="20" y="316.33333333333331" width="139" height="43"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Version 1">
                                                         <attributes>
-                                                            <font key="NSFont" size="36" name=".SFNS-BoldItalic"/>
+                                                            <font key="NSFont" metaFont="system" size="36"/>
                                                             <font key="NSOriginalFont" metaFont="systemBold" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             <integer key="NSUnderline" value="1"/>
@@ -52,32 +52,32 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G6-Uz-5ru">
-                                                <rect key="frame" x="20" y="376.33333333333337" width="388" height="182.66666666666663"/>
+                                                <rect key="frame" x="20" y="379.33333333333337" width="388" height="182.66666666666663"/>
                                                 <string key="text">Version 1 of the project works by using the Device Motion sensors included across most Apple devices. By tracking the roll, pitch, and yaw of the device in regards to the motions made, it transcribes the motions to deliver the approriately mapped letter or number. While functional, this implementation does have some limitations as the motions made are central to the device itself, and not the user.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appledeveloper_roll-pitch-yaw" translatesAutoresizingMaskIntoConstraints="NO" id="8K5-5e-94u">
-                                                <rect key="frame" x="20" y="579" width="388" height="408"/>
+                                                <rect key="frame" x="20" y="582" width="388" height="408"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="388" id="M9O-Ot-bTv"/>
                                                     <constraint firstAttribute="height" constant="408" id="z6f-Dz-dBO"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-0b-W2b">
-                                                <rect key="frame" x="20" y="1007" width="388" height="122"/>
+                                                <rect key="frame" x="20" y="1010" width="388" height="122"/>
                                                 <string key="text">Instructions: To test and begin using Version 1 of the iOS Gesture Alphabet, please hit the home button, select "Ver. 1" to access the functionality, hit the button located on the bottom of the screen, and press anywhere else on the screen aside from the text boxes, and begin tilting!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6G-fQ-KkG">
-                                                <rect key="frame" x="20" y="1169" width="137" height="40"/>
+                                                <rect key="frame" x="20" y="1172" width="143.33333333333334" height="43"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Version 2">
                                                         <attributes>
-                                                            <font key="NSFont" size="36" name=".SFNS-BoldItalic"/>
+                                                            <font key="NSFont" metaFont="system" size="36"/>
                                                             <font key="NSOriginalFont" metaFont="systemBold" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             <integer key="NSUnderline" value="1"/>
@@ -420,8 +420,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uc-wb-edj">
                                 <rect key="frame" x="160" y="753.66666666666663" width="108" height="108"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="109.33" id="3F1-LU-YH5"/>
-                                    <constraint firstAttribute="width" constant="108" id="zEW-0j-ztZ"/>
+                                    <constraint firstAttribute="height" constant="109.33333333333337" id="0pd-VM-Tv0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -434,21 +433,48 @@
                                 <rect key="frame" x="164" y="144" width="100" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Fkt-is-OWG"/>
-                                    <constraint firstAttribute="height" constant="60" id="zPF-1j-LDl"/>
+                                    <constraint firstAttribute="height" constant="60" id="c0t-rx-1Qb"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="questionmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-mC-HLJ">
+                                <rect key="frame" x="119" y="627" width="58" height="49.666666666666629"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="3cK-cY-xK1"/>
+                                    <constraint firstAttribute="width" constant="58" id="nmF-8W-5c1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8x2-Rw-zjy">
+                                <rect key="frame" x="119" y="627" width="58" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="0R4-vh-Rsd"/>
+                                    <constraint firstAttribute="width" constant="58" id="MDv-uN-02k"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="H69-5Q-RYs" kind="presentation" id="KGn-DY-95c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dcY-yE-tZN"/>
                         <color key="backgroundColor" red="0.84313725490000002" green="0.2470588235" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dcY-yE-tZN" firstAttribute="bottom" secondItem="3uc-wb-edj" secondAttribute="bottom" constant="30" id="H8r-eM-lpj"/>
-                            <constraint firstItem="3uc-wb-edj" firstAttribute="centerX" secondItem="gc6-lG-wa5" secondAttribute="centerX" id="JcW-xo-Hyd"/>
-                            <constraint firstItem="jbr-f2-5x0" firstAttribute="centerX" secondItem="gc6-lG-wa5" secondAttribute="centerX" id="t0g-9W-YwN"/>
-                            <constraint firstItem="jbr-f2-5x0" firstAttribute="top" secondItem="dcY-yE-tZN" secondAttribute="top" constant="100" id="uhj-jx-D6I"/>
+                            <constraint firstItem="8x2-Rw-zjy" firstAttribute="leading" secondItem="3uc-wb-edj" secondAttribute="trailing" constant="-75" id="2fQ-gG-fBG"/>
+                            <constraint firstItem="8x2-Rw-zjy" firstAttribute="top" secondItem="ggP-mC-HLJ" secondAttribute="top" constant="1" id="AXq-HX-HwQ"/>
+                            <constraint firstItem="dcY-yE-tZN" firstAttribute="bottom" secondItem="3uc-wb-edj" secondAttribute="bottom" constant="30" id="D7s-lq-kyI"/>
+                            <constraint firstItem="ggP-mC-HLJ" firstAttribute="bottom" secondItem="8x2-Rw-zjy" secondAttribute="bottom" constant="-1" id="EMB-LU-gI2"/>
+                            <constraint firstItem="8x2-Rw-zjy" firstAttribute="top" secondItem="dcY-yE-tZN" secondAttribute="top" constant="583" id="KgA-y3-hjz"/>
+                            <constraint firstItem="jbr-f2-5x0" firstAttribute="top" secondItem="dcY-yE-tZN" secondAttribute="top" constant="100" id="Pxr-th-HBe"/>
+                            <constraint firstItem="jbr-f2-5x0" firstAttribute="centerX" secondItem="gc6-lG-wa5" secondAttribute="centerX" id="U4I-sG-p7V"/>
+                            <constraint firstItem="jbr-f2-5x0" firstAttribute="leading" secondItem="dcY-yE-tZN" secondAttribute="leading" constant="164" id="YoP-ns-Bcc"/>
+                            <constraint firstItem="8x2-Rw-zjy" firstAttribute="trailing" secondItem="ggP-mC-HLJ" secondAttribute="trailing" id="a7j-mS-cCy"/>
+                            <constraint firstItem="ggP-mC-HLJ" firstAttribute="leading" secondItem="8x2-Rw-zjy" secondAttribute="leading" id="aE7-2U-dZL"/>
+                            <constraint firstItem="dcY-yE-tZN" firstAttribute="trailing" secondItem="ggP-mC-HLJ" secondAttribute="trailing" constant="177" id="gbT-AR-kWN"/>
+                            <constraint firstItem="jbr-f2-5x0" firstAttribute="centerX" secondItem="3uc-wb-edj" secondAttribute="centerX" id="j0U-ip-y7Z"/>
+                            <constraint firstItem="dcY-yE-tZN" firstAttribute="bottom" secondItem="ggP-mC-HLJ" secondAttribute="bottom" constant="215" id="sZu-L1-1Vi"/>
+                            <constraint firstItem="3uc-wb-edj" firstAttribute="leading" secondItem="dcY-yE-tZN" secondAttribute="leading" constant="160" id="wn8-ql-QJI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="WHM-IN-Tqu">
@@ -465,7 +491,131 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kq9-Is-j5A" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2877" y="790"/>
+            <point key="canvasLocation" x="2876.6355140186915" y="789.84881209503249"/>
+        </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="3T9-b3-9eB">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="H69-5Q-RYs" customClass="PopupViewController" customModule="iOS_Gesture_Alphabet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Hp-Ya-ZCE">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-Zh-WPB">
+                                <rect key="frame" x="20" y="120" width="388" height="128"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="388" id="WR6-oA-ze3"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="388" id="p6r-Md-tHl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="pNX-bE-bkM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="388" id="qJD-gP-63B"/>
+                                    <constraint firstAttribute="height" constant="128" id="x7C-Bi-1DO"/>
+                                </constraints>
+                                <string key="text">* Motion Data Gesture Alphabet
+* Record motion data while touching the screen
+* Print letter after releasing from the screen.
+* More data: branch name= gestureconverter
+* Positions that already visited will be ignored 
+(e.g: bottom-&gt;bottom_left-&gt;bottom  == bottom-&gt;bottom_left) (the second "bottom" is ignored.) 
+</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAj-Ns-hb0">
+                                <rect key="frame" x="20" y="748" width="388" height="64"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0ys-gt-KnY"/>
+                                    <constraint firstAttribute="width" constant="388" id="ax6-D1-CI2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="388" id="bfw-js-Mlg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="e1X-f1-sCO"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="388" id="gbH-j6-Mwt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closepopup:" destination="H69-5Q-RYs" eventType="touchUpInside" id="QRe-E9-w8G"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P9J-tc-WSv">
+                                <rect key="frame" x="20" y="256" width="388" height="462"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="388" id="EGP-3I-eHd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="462" id="I16-hV-aV2"/>
+                                    <constraint firstAttribute="width" constant="388" id="hQz-Et-sWW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="388" id="u9G-Sl-VVa"/>
+                                    <constraint firstAttribute="height" constant="462" id="w9F-At-lA0"/>
+                                </constraints>
+                                <string key="text">A: bottom
+B: bottom -&gt; bottom_left
+C: bottom -&gt; bottom_right
+D: bottom_left
+E: bottom_left -&gt; left
+F: bottom_left -&gt; bottom
+G: left
+H: left -&gt; bottom_left
+I: left -&gt; top_left
+J: top_left
+K: top_left -&gt; left
+L: top_left -&gt; top
+M: top
+N: top -&gt; top_left
+O: top -&gt; top_right
+P: top_right
+Q: top_right -&gt; top
+R: top_right -&gt; right
+S: right
+T: right -&gt; top_right
+U: right -&gt; bottom_right
+V: bottom_right
+W: bottom_right -&gt; right
+X: bottom_right -&gt; bottom
+Y: bottom -&gt; bottom_left -&gt; bottom_right
+Z: bottom -&gt; bottom_right -&gt; bottom_left
+
+space: middle
+
+0: middle -&gt; bottom
+1: middle -&gt; bottom_left
+2: middle -&gt; left
+3: middle -&gt; top_left
+4: middle -&gt; top
+5: middle -&gt; top_right
+6: middle -&gt; right
+7: middle -&gt; bottom_right
+8: middle -&gt; bottom -&gt; bottom_left
+9: middle -&gt; bottom -&gt; bottom_right
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3qb-vU-ceF"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P9J-tc-WSv" firstAttribute="centerY" secondItem="1Hp-Ya-ZCE" secondAttribute="centerY" constant="24" id="2Db-oF-Kko"/>
+                            <constraint firstItem="5Wx-Zh-WPB" firstAttribute="centerY" secondItem="1Hp-Ya-ZCE" secondAttribute="centerY" constant="-279" id="5Oz-55-L8o"/>
+                            <constraint firstItem="P9J-tc-WSv" firstAttribute="centerX" secondItem="1Hp-Ya-ZCE" secondAttribute="centerX" id="5U4-v1-fhu"/>
+                            <constraint firstItem="5Wx-Zh-WPB" firstAttribute="centerY" secondItem="1Hp-Ya-ZCE" secondAttribute="centerY" constant="-279" id="EQR-fA-Nsq"/>
+                            <constraint firstItem="5Wx-Zh-WPB" firstAttribute="centerX" secondItem="1Hp-Ya-ZCE" secondAttribute="centerX" id="HAK-HX-v9d"/>
+                            <constraint firstItem="FAj-Ns-hb0" firstAttribute="centerY" secondItem="1Hp-Ya-ZCE" secondAttribute="centerY" constant="317" id="Vck-B3-e6L"/>
+                            <constraint firstItem="P9J-tc-WSv" firstAttribute="centerY" secondItem="1Hp-Ya-ZCE" secondAttribute="centerY" constant="24" id="atm-FG-edq"/>
+                            <constraint firstItem="FAj-Ns-hb0" firstAttribute="centerY" secondItem="1Hp-Ya-ZCE" secondAttribute="centerY" constant="317" id="b2L-mT-IOv"/>
+                            <constraint firstItem="FAj-Ns-hb0" firstAttribute="centerX" secondItem="1Hp-Ya-ZCE" secondAttribute="centerX" id="fBC-7X-Czh"/>
+                            <constraint firstItem="FAj-Ns-hb0" firstAttribute="centerX" secondItem="1Hp-Ya-ZCE" secondAttribute="centerX" id="mzD-1H-yiL"/>
+                            <constraint firstItem="P9J-tc-WSv" firstAttribute="centerX" secondItem="1Hp-Ya-ZCE" secondAttribute="centerX" id="qzS-m4-YUW"/>
+                            <constraint firstItem="5Wx-Zh-WPB" firstAttribute="centerX" secondItem="1Hp-Ya-ZCE" secondAttribute="centerX" id="rce-ZD-mCK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SkJ-GB-ptC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3670.0934579439249" y="789.84881209503249"/>
         </scene>
     </scenes>
     <resources>
@@ -474,21 +624,22 @@
         <image name="home" width="24" height="24"/>
         <image name="menu" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="record.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

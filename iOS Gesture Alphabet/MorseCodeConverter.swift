@@ -258,34 +258,12 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    ///
-    
-    
-    
-    lazy var textField: UITextField = {
-        let width: CGFloat = 250
-        let height: CGFloat = 50
-        let posX: CGFloat = (self.view.bounds.width - width)/2
-        let posY: CGFloat = (self.view.bounds.height - height)/5
-        
-        let textField = UITextField(frame: CGRect(x: posX, y: posY, width: width, height: height))
-        
-        textField.text = ""
-        
-        textField.delegate = self
-        
-        textField.borderStyle = .roundedRect
-        
-        textField.clearButtonMode = .whileEditing
-        
-        return textField
-    }()
     
     lazy var textField_letter: UITextField = {
-        let width: CGFloat = 250
+        let width: CGFloat = 200
         let height: CGFloat = 50
         let posX: CGFloat = (self.view.bounds.width - width)/2
-        let posY: CGFloat = (self.view.bounds.height - height)/1.5
+        let posY: CGFloat = (self.view.bounds.height - height)/2
         
         let textField_letter = UITextField(frame: CGRect(x: posX, y: posY, width: width, height: height))
 
@@ -546,18 +524,10 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
     
     // when press "return" (or "enter" button on the keyboard)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        var letters = ""
-        
-        letters += textField_letter.text!
-        textField_letter.text = morseToString(textField.text!)
-        letters += textField_letter.text!
-
-        textField_letter.text = letters
+        textField_letter.text = ""
         print("Before convertion \((textField.text) ?? "Empty")")
         print("After convertion \((textField_letter.text) ?? "Empty")")
         textField.resignFirstResponder()
-        
         
         return true
     }
@@ -602,52 +572,4 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         
     }
     
-}
-
-let morseToLetter = [
-    ".-": "A",
-    "-...": "B",
-    "-.-.": "C",
-    "-..": "D",
-    ".": "E",
-    "..-.": "F",
-    "--.": "G",
-    "....": "H",
-    "..": "I",
-    ".---": "J",
-    "-.-": "K",
-    ".-..": "L",
-    "--": "M",
-    "-.": "N",
-    "---": "O",
-    ".--.": "P",
-    "--.-": "Q",
-    ".-.": "R",
-    "...": "S",
-    "-": "T",
-    "..-": "U",
-    "...-": "V",
-    ".--": "W",
-    "-..-": "X",
-    "-.--": "Y",
-    "--..": "Z",
-    ".----": "1",
-    "..---": "2",
-    "...--": "3",
-    "....-": "4",
-    ".....": "5",
-    "-....": "6",
-    "--...": "7",
-    "---..": "8",
-    "----.": "9",
-    "-----": "0",
-    " ": " ",
-]
-
-func morseToString(_ input: String) -> String {
-    var returnChar = morseToLetter[String(input)]
-    if returnChar == nil {
-        returnChar = ""
-    }
-    return returnChar!
 }

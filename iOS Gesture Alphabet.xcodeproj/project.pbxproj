@@ -12,7 +12,8 @@
 		4F5404A3253DF9060046DDC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5404A2253DF9060046DDC7 /* ViewController.swift */; };
 		4F5404A8253DF9070046DDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A7253DF9070046DDC7 /* Assets.xcassets */; };
 		4F5404AB253DF9070046DDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5404A9253DF9070046DDC7 /* LaunchScreen.storyboard */; };
-		B7FFBE0826181CEF001A33EC /* MLModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B7FFBE0726181CEF001A33EC /* MLModel.mlmodel */; };
+		DB3D74CE262A2C12005FD588 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3D74CD262A2C12005FD588 /* PopupViewController.swift */; };
+		DB3D74D3262A303F005FD588 /* MLModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DB3D74D2262A303F005FD588 /* MLModel.mlmodel */; };
 		DBB1A0AE25545F98000F6559 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0AD25545F98000F6559 /* MenuViewController.swift */; };
 		DBB1A0B225550E77000F6559 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B125550E77000F6559 /* HomeViewController.swift */; };
 		DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1A0B525550E97000F6559 /* SlideInTransition.swift */; };
@@ -29,6 +30,8 @@
 		4F5404AA253DF9070046DDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5404AC253DF9070046DDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7FFBE0726181CEF001A33EC /* MLModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MLModel.mlmodel; path = ../../MLModel.mlmodel; sourceTree = "<group>"; };
+		DB3D74CD262A2C12005FD588 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		DB3D74D2262A303F005FD588 /* MLModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MLModel.mlmodel; path = "iOS Gesture Alphabet/MLModel.mlmodel"; sourceTree = "<group>"; };
 		DBB1A0AD25545F98000F6559 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B125550E77000F6559 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DBB1A0B525550E97000F6559 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		4F540492253DF9060046DDC7 = {
 			isa = PBXGroup;
 			children = (
+				DB3D74D2262A303F005FD588 /* MLModel.mlmodel */,
 				4F54049D253DF9060046DDC7 /* iOS Gesture Alphabet */,
 				4F54049C253DF9060046DDC7 /* Products */,
 			);
@@ -78,6 +82,7 @@
 				DBB1A0AD25545F98000F6559 /* MenuViewController.swift */,
 				B7FFBE0726181CEF001A33EC /* MLModel.mlmodel */,
 				DBB1A0EF255E62A6000F6559 /* MorseCodeConverter.swift */,
+				DB3D74CD262A2C12005FD588 /* PopupViewController.swift */,
 			);
 			path = "iOS Gesture Alphabet";
 			sourceTree = "<group>";
@@ -152,11 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3D74D3262A303F005FD588 /* MLModel.mlmodel in Sources */,
 				DBB1A0B225550E77000F6559 /* HomeViewController.swift in Sources */,
-				B7FFBE0826181CEF001A33EC /* MLModel.mlmodel in Sources */,
 				4F5404A3253DF9060046DDC7 /* ViewController.swift in Sources */,
 				4F54049F253DF9060046DDC7 /* AppDelegate.swift in Sources */,
 				DBB1A0B725550E97000F6559 /* SlideInTransition.swift in Sources */,
+				DB3D74CE262A2C12005FD588 /* PopupViewController.swift in Sources */,
 				4F5404A1253DF9060046DDC7 /* SceneDelegate.swift in Sources */,
 				DBB1A0F0255E62A6000F6559 /* MorseCodeConverter.swift in Sources */,
 				DBB1A0AE25545F98000F6559 /* MenuViewController.swift in Sources */,
@@ -307,13 +313,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AJH2KG358H;
+				COREML_CODEGEN_LANGUAGE = None;
+				DEVELOPMENT_TEAM = 2QR85T6QY4;
 				INFOPLIST_FILE = "iOS Gesture Alphabet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K2";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K23";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,13 +333,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AJH2KG358H;
+				COREML_CODEGEN_LANGUAGE = None;
+				DEVELOPMENT_TEAM = 2QR85T6QY4;
 				INFOPLIST_FILE = "iOS Gesture Alphabet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K2";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-Gesture-Alphabet-K23";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
