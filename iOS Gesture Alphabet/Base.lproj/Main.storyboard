@@ -457,6 +457,11 @@
                                     <segue destination="H69-5Q-RYs" kind="presentation" id="KGn-DY-95c"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PX8-ic-Ru9">
+                                <rect key="frame" x="167" y="275" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dcY-yE-tZN"/>
                         <color key="backgroundColor" red="0.84313725490000002" green="0.2470588235" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -466,12 +471,15 @@
                             <constraint firstItem="dcY-yE-tZN" firstAttribute="bottom" secondItem="3uc-wb-edj" secondAttribute="bottom" constant="30" id="D7s-lq-kyI"/>
                             <constraint firstItem="ggP-mC-HLJ" firstAttribute="bottom" secondItem="8x2-Rw-zjy" secondAttribute="bottom" constant="-1" id="EMB-LU-gI2"/>
                             <constraint firstItem="8x2-Rw-zjy" firstAttribute="top" secondItem="dcY-yE-tZN" secondAttribute="top" constant="583" id="KgA-y3-hjz"/>
+                            <constraint firstItem="PX8-ic-Ru9" firstAttribute="leading" secondItem="dcY-yE-tZN" secondAttribute="leading" constant="167" id="Ns6-uf-ixN"/>
                             <constraint firstItem="jbr-f2-5x0" firstAttribute="top" secondItem="dcY-yE-tZN" secondAttribute="top" constant="100" id="Pxr-th-HBe"/>
                             <constraint firstItem="jbr-f2-5x0" firstAttribute="centerX" secondItem="gc6-lG-wa5" secondAttribute="centerX" id="U4I-sG-p7V"/>
                             <constraint firstItem="jbr-f2-5x0" firstAttribute="leading" secondItem="dcY-yE-tZN" secondAttribute="leading" constant="164" id="YoP-ns-Bcc"/>
+                            <constraint firstItem="PX8-ic-Ru9" firstAttribute="trailing" secondItem="jbr-f2-5x0" secondAttribute="trailing" id="YuN-RD-IHW"/>
                             <constraint firstItem="8x2-Rw-zjy" firstAttribute="trailing" secondItem="ggP-mC-HLJ" secondAttribute="trailing" id="a7j-mS-cCy"/>
                             <constraint firstItem="ggP-mC-HLJ" firstAttribute="leading" secondItem="8x2-Rw-zjy" secondAttribute="leading" id="aE7-2U-dZL"/>
                             <constraint firstItem="dcY-yE-tZN" firstAttribute="trailing" secondItem="ggP-mC-HLJ" secondAttribute="trailing" constant="177" id="gbT-AR-kWN"/>
+                            <constraint firstItem="PX8-ic-Ru9" firstAttribute="top" secondItem="jbr-f2-5x0" secondAttribute="bottom" constant="71" id="hb5-yu-a2Z"/>
                             <constraint firstItem="jbr-f2-5x0" firstAttribute="centerX" secondItem="3uc-wb-edj" secondAttribute="centerX" id="j0U-ip-y7Z"/>
                             <constraint firstItem="dcY-yE-tZN" firstAttribute="bottom" secondItem="ggP-mC-HLJ" secondAttribute="bottom" constant="215" id="sZu-L1-1Vi"/>
                             <constraint firstItem="3uc-wb-edj" firstAttribute="leading" secondItem="dcY-yE-tZN" secondAttribute="leading" constant="160" id="wn8-ql-QJI"/>
@@ -486,6 +494,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="expectedoutput" destination="PX8-ic-Ru9" id="B17-vk-fMf"/>
                         <outlet property="presenter" destination="jbr-f2-5x0" id="Qv9-Tu-mgj"/>
                     </connections>
                 </viewController>

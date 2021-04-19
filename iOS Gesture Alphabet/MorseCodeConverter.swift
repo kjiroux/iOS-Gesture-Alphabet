@@ -96,6 +96,9 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var yMotion: UITextField!
     @IBOutlet weak var zMotion: UITextField!
     
+    
+    @IBOutlet weak var expectedoutput: UITextField!
+    
     var motion = CMMotionManager()
 
     var hReset = 0
@@ -254,6 +257,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 {
                     self.presenter.text = "top_right"
                 }
+                self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
                 
             }
         }
@@ -307,6 +311,47 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             }
         }
         return removedarray
+    }
+    
+    func initial_gesture(_ str: String) -> String
+    {
+        if str == "bottom"
+        {
+            return "A"
+        }
+        else if str == "bottom_left"
+        {
+            return "D"
+        }
+        else if str == "left"
+        {
+            return "G"
+        }
+        else if str == "top_left"
+        {
+            return "J"
+        }
+        else if str == "top"
+        {
+            return "M"
+        }
+        else if str == "top_right"
+        {
+            return "P"
+        }
+        else if str == "right"
+        {
+            return "S"
+        }
+        else if str == "bottom_right"
+        {
+            return "V"
+        }
+        else if str == "middle"
+        {
+            return "space"
+        }
+        return "Unexpected"
     }
     
     // this function is to print out the result depending on the gesture
@@ -491,6 +536,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             //storing gesture!!
             print("begin")
             recordedgesture.append(self.presenter.text!)
+            expectedoutput.text = ""
             // timerbegin()
         }
         
@@ -498,6 +544,9 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         {
             print("changed")
             recordedgesture.append(self.presenter.text!)
+            recordedgesture = removeduplicate(recordedgesture)
+            let ex_str = printgesture(recordedgesture)
+            expectedoutput.text = ex_str
             
         }
         
@@ -513,6 +562,8 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             var lettervalue:String = ""
             lettervalue += textField_letter.text!
             lettervalue += printgesture(recordedgesture)
+            
+            expectedoutput.text = ""
             
             textField_letter.text = lettervalue
             
