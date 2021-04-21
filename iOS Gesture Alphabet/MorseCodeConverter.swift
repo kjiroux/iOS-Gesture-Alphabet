@@ -96,6 +96,9 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var yMotion: UITextField!
     @IBOutlet weak var zMotion: UITextField!
     
+    
+    @IBOutlet weak var expectedoutput: UITextField!
+    
     var motion = CMMotionManager()
 
     var hReset = 0
@@ -144,11 +147,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 self.acc_x = x.rounded(toPlaces: 9)
                 self.acc_y = y.rounded(toPlaces: 9)
                 self.acc_z = z.rounded(toPlaces: 9)
-                /*
-                self.xAccel.text = "x: \(Double(x))"
-                self.yAccel.text = "y: \(Double(y))"
-                self.zAccel.text = "z: \(Double(z))"
-                */
+                
                 self.accelCapture.append(AccelCapture_cp(xAccel: x.rounded(toPlaces: 9), yAccel: y.rounded(toPlaces: 9), zAccel: z.rounded(toPlaces: 9)))
                 
             }
@@ -163,12 +162,6 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 let x = trueData.rotationRate.x
                 let y = trueData.rotationRate.y
                 let z = trueData.rotationRate.z
-                /*
-                self.xGyro.text = "x: \(Double(x).rounded(toPlaces: 3))"
-                self.yGyro.text = "y: \(Double(y).rounded(toPlaces: 3))"
-                self.zGyro.text = "z: \(Double(z).rounded(toPlaces: 3))"
-                 */
-                
             }
         }
         
@@ -181,12 +174,6 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 let mPitch = trueData.attitude.pitch
                 let mRoll  = trueData.attitude.roll
                 let mYaw   = trueData.attitude.yaw
-                
-                /*
-                self.xMotion.text = "Pitch: \(Double(mPitch).rounded(toPlaces: 3))"
-                self.yMotion.text = "Roll: \(Double(mRoll).rounded(toPlaces: 3))"
-                self.zMotion.text = "Yaw: \(Double(mYaw).rounded(toPlaces: 3))"
-                */
 
                 // In the middle
                 if (-0.5 < mRoll && 0.5 > mRoll)
@@ -234,149 +221,53 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 if (self.horizontalMotion == 0 && self.verticalMotion == 0)
                 {
                     
-                    // idea 1) keep holding the record button (or volum down button?) until the user is done his gesture
-                    // if the user's done his/her gesture, release the button
-                    // then it records how it moves (e.g: bottom left->bottom / bottom->bottom right)
-                    // So, translate the movement to letters (bottom(A) / bottom->bottom_left(B) / bottom->bottom_right(C) ...)
-                    // Esenssially, the prsenter text box should always prints out the status (like, "bottom" (or "A"), "bottom right" (or "D") / bottom("A")->bottom_left("B") / bottom("A")->bottom_right("C")) to let the user know where he/she starts before recording their gesture.
-                    // Then, it's possible to make/design bunch of gestures! (more than 100)
-                    // Difficulty)
-                    // 1) how to make record button (should be recorded only while the user is pushing the button)
-                    // 2) how to make functions (use if statement?)
-                    
-                    
-                    
-                    // if we push "caputre" (or "record)" button,
-                    // then, the letter that is assgined will print out in the text box
-                    
-                    // Problem 1) How to get accelometer data?
-                    // Problem 2) How much time we need without changing letter to push the record button
-                    // Problem 3) Do we need to make "reset" button ? // I don't think so
-                    // Problem 4) Do we need Gyroscope data?
-                    
-                    // no accelometer data, then it will print E
-                    // IMPORTANT: x y z are accelometer data that is printed out on the screen!
-                    
                     self.presenter.text = "bottom_left"
-                    //self.presenter.text = "E" // bottom left (x = -0.87 / y = -0.48 / z = -0.085) (left side)
-                    // ~ (x = -0.177 / y = -0.98 / z = -0.038) (bottom side)
-                    
-                    
-                    // with accelometer data on x-axis, then 'A' will be B
-                    // Need more testing to find proper accelometer data.!!!!!!!!
-                    // Need more data how accelometer seonsor works.!!!!!!!!!!!
-                    /*
-                    if(self.acc_x > 0 && self.acc_y <= 0 && self.acc_z <= 0)
-                    {
-                        self.presenter.text = "F"
-                    }
-                    else if(self.acc_x <= 0 && self.acc_y > 0 && self.acc_z <= 0)
-                    {
-                        self.presenter.text = "G"
-                    }
-                    else if(self.acc_x <= 0 && self.acc_y <= 0 && self.acc_z > 0)
-                    {
-                        self.presenter.text = "H"
-                    }
-                    */
                     
                 }
                 else if (self.horizontalMotion == 0 && self.verticalMotion == 1)
                 {
-                    self.presenter.text = "left" // left(M) (x = -0.99 / y = 0.007 / z = -0.12)
-                                            // need upper middle side and lower middle side
-                    // N
-                    // O
-                    // P
+                    self.presenter.text = "left"
                 }
                 else if (self.horizontalMotion == 0 && self.verticalMotion == 2)
                 {
-                    self.presenter.text = "top_left" // top_left (x = -0.80 / y = 0.52 / z = -0.048) (left side)
-                    // ~ (x = -0.11 / y = 1.00 / z = -0.11) (top side)
+                    self.presenter.text = "top_left"
                 }
                 else if (self.horizontalMotion == 1 && self.verticalMotion == 0)
                 {
                     self.presenter.text = "bottom"
-                    /*
-                    self.presenter.text = "A" // bottom (x = -.008 / y = -0.99 / z = -0.001)
-                                            // need upper middle side and lower middle side
-                    
-                    if(self.acc_x > 0.09 && self.acc_y <= 0 && self.acc_z <= 0) // move up
-                    {
-                        self.presenter.text = "B"
-                    }
-                    else if(self.acc_x > 0.2 && self.acc_y <= 0 && self.acc_z <= 0) // move right
-                    {
-                        self.presenter.text = "C"
-                    }
-                    else if(self.acc_x < -0.15 && self.acc_z < -0.2) // move left
-                    {
-                        self.presenter.text = "D"
-                    }
-                    */
+   
                 }
                 else if (self.horizontalMotion == 1 && self.verticalMotion == 1)
                 {
-                    self.presenter.text = "middle" // middle (x = -0.007 / y = 0.017 / z = -1.0)
+                    self.presenter.text = "middle"
                 }
                 else if (self.horizontalMotion == 1 && self.verticalMotion == 2)
                 {
-                    self.presenter.text = "top" // top (x = 0.011 / y = 1.028 / z = -0.065)
-                                            // need upper middle side and lower middle side
+                    self.presenter.text = "top"
                 }
                 else if (self.horizontalMotion == 2 && self.verticalMotion == 0)
                 {
                     self.presenter.text = "bottom_right"
-                    //self.presenter.text = "I" //bottom right (x = 0.77 / y =-0.59 / z = -0.125) (right side)
-                                                // ~ (x = 0.175 / y =-0.98 / z = -0.073) (bottom side)
-                    //J
-                    //K
-                    //L
-                    
                 }
                 else if (self.horizontalMotion == 2 && self.verticalMotion == 1)
                 {
-                    self.presenter.text = "right" // right (x = 1.00 / y = -0.001 / z = -0.11)
-                                                // need upper middle side and lower middle side
+                    self.presenter.text = "right"
                 }
                 else if (self.horizontalMotion == 2 && self.verticalMotion == 2)
                 {
-                    self.presenter.text = "top_right" // top_right (
+                    self.presenter.text = "top_right"
                 }
+                self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
                 
             }
         }
-        
-        
     }
-    ///
-    
-    
-    
-    lazy var textField: UITextField = {
-        let width: CGFloat = 250
-        let height: CGFloat = 50
-        let posX: CGFloat = (self.view.bounds.width - width)/2
-        let posY: CGFloat = (self.view.bounds.height - height)/5
-        
-        let textField = UITextField(frame: CGRect(x: posX, y: posY, width: width, height: height))
-        
-        textField.text = ""
-        
-        textField.delegate = self
-        
-        textField.borderStyle = .roundedRect
-        
-        textField.clearButtonMode = .whileEditing
-        
-        return textField
-    }()
     
     lazy var textField_letter: UITextField = {
-        let width: CGFloat = 250
+        let width: CGFloat = 200
         let height: CGFloat = 50
         let posX: CGFloat = (self.view.bounds.width - width)/2
-        let posY: CGFloat = (self.view.bounds.height - height)/1.5
+        let posY: CGFloat = (self.view.bounds.height - height)/2
         
         let textField_letter = UITextField(frame: CGRect(x: posX, y: posY, width: width, height: height))
 
@@ -422,18 +313,50 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         return removedarray
     }
     
+    func initial_gesture(_ str: String) -> String
+    {
+        if str == "bottom"
+        {
+            return "A"
+        }
+        else if str == "bottom_left"
+        {
+            return "D"
+        }
+        else if str == "left"
+        {
+            return "G"
+        }
+        else if str == "top_left"
+        {
+            return "J"
+        }
+        else if str == "top"
+        {
+            return "M"
+        }
+        else if str == "top_right"
+        {
+            return "P"
+        }
+        else if str == "right"
+        {
+            return "S"
+        }
+        else if str == "bottom_right"
+        {
+            return "V"
+        }
+        else if str == "middle"
+        {
+            return "space"
+        }
+        return "Unexpected"
+    }
+    
     // this function is to print out the result depending on the gesture
     func printgesture(_ array: [String]) -> String
     {
-        /*
-        for index in 0..<array.count
-        {
-            if (array[i] == "bottom")
-            {
-                
-            }
-        }
-        */
         
         //for little demo!
         if array.count == 1
@@ -613,6 +536,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             //storing gesture!!
             print("begin")
             recordedgesture.append(self.presenter.text!)
+            expectedoutput.text = ""
             // timerbegin()
         }
         
@@ -620,6 +544,9 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         {
             print("changed")
             recordedgesture.append(self.presenter.text!)
+            recordedgesture = removeduplicate(recordedgesture)
+            let ex_str = printgesture(recordedgesture)
+            expectedoutput.text = ex_str
             
         }
         
@@ -636,6 +563,8 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             lettervalue += textField_letter.text!
             lettervalue += printgesture(recordedgesture)
             
+            expectedoutput.text = ""
+            
             textField_letter.text = lettervalue
             
             
@@ -646,47 +575,13 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
     
     // when press "return" (or "enter" button on the keyboard)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        var letters = ""
-        
-        letters += textField_letter.text!
-        textField_letter.text = morseToString(textField.text!)
-        letters += textField_letter.text!
-
-        textField_letter.text = letters
+        textField_letter.text = ""
         print("Before convertion \((textField.text) ?? "Empty")")
         print("After convertion \((textField_letter.text) ?? "Empty")")
         textField.resignFirstResponder()
         
-        
         return true
     }
-    /*
-    // This is in direct relation to the button and when it is hit. onSwitch is
-    // a boolean variable which determines if CoreMotion data should be started,
-    // as well as clears the gestureCapture array before getting started.
-    @IBAction func recordButton(_ sender: UIButton) {
-        
-        onSwitch = !onSwitch
-        accelCapture = []
-        gestureCapture = []
-        getCoreMotionData()
-        
-        if (onSwitch == true) {
-            print("Capture data.")
-            var temp_letter = ""
-            // prsenter.text data capture
-            // 여기서 바텀래프트 라이트 같은것 (프레젠터에 있는값)을 캡처버튼을 누르면 모스코드 페이지의 위쪽 텍스트 박스에
-            // 점차 쌓이게 되도록 설정해놓자.
-            // 그리고 모스코드 볂환 버튼(엔터키)를 누르면 그 텍스트필드는 비어있도록 설정해놓고 아래 텍스트박스에 모스코드 변환값을 넣을것
-            //  바텀레프트는 닷, 바텀 라이트는 대쉬, 그냥 바텀은 스페이스바로 설정하자.
-            temp_letter += textField_letter.text!
-            temp_letter += self.presenter.text!
-            textField_letter.text = temp_letter
-            onSwitch = false
-        }
-    }
-     */
     // This is in direct relation to the button and when it is hit. onSwitch is
     // a boolean variable which determines if CoreMotion data should be started,
     // as well as clears the gestureCapture array before getting started.
@@ -716,11 +611,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         onSwitch = false
         
         var temp_letter = ""
-        // prsenter.text data capture
-        // 여기서 바텀래프트 라이트 같은것 (프레젠터에 있는값)을 캡처버튼을 누르면 모스코드 페이지의 위쪽 텍스트 박스에
-        // 점차 쌓이게 되도록 설정해놓자.
-        // 그리고 모스코드 볂환 버튼(엔터키)를 누르면 그 텍스트필드는 비어있도록 설정해놓고 아래 텍스트박스에 모스코드 변환값을 넣을것
-        //  바텀레프트는 닷, 바텀 라이트는 대쉬, 그냥 바텀은 스페이스바로 설정하자.
+        
         temp_letter += textField_letter.text!
         temp_letter += self.presenter.text!
         textField_letter.text = temp_letter
@@ -732,52 +623,4 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         
     }
     
-}
-
-let morseToLetter = [
-    ".-": "A",
-    "-...": "B",
-    "-.-.": "C",
-    "-..": "D",
-    ".": "E",
-    "..-.": "F",
-    "--.": "G",
-    "....": "H",
-    "..": "I",
-    ".---": "J",
-    "-.-": "K",
-    ".-..": "L",
-    "--": "M",
-    "-.": "N",
-    "---": "O",
-    ".--.": "P",
-    "--.-": "Q",
-    ".-.": "R",
-    "...": "S",
-    "-": "T",
-    "..-": "U",
-    "...-": "V",
-    ".--": "W",
-    "-..-": "X",
-    "-.--": "Y",
-    "--..": "Z",
-    ".----": "1",
-    "..---": "2",
-    "...--": "3",
-    "....-": "4",
-    ".....": "5",
-    "-....": "6",
-    "--...": "7",
-    "---..": "8",
-    "----.": "9",
-    "-----": "0",
-    " ": " ",
-]
-
-func morseToString(_ input: String) -> String {
-    var returnChar = morseToLetter[String(input)]
-    if returnChar == nil {
-        returnChar = ""
-    }
-    return returnChar!
 }
