@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="iOS_Gesture_Alphabet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="2400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="2300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-zj-n97">
-                                <rect key="frame" x="0.0" y="102" width="428" height="2298"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-zj-n97">
+                                <rect key="frame" x="0.0" y="102" width="428" height="2198"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-xX-e2f">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1000"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-xX-e2f" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="2100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1O-hL-Hnb">
                                                 <rect key="frame" x="20" y="20" width="388" height="256.5"/>
@@ -67,14 +67,14 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-0b-W2b">
                                                 <rect key="frame" x="20" y="1010.5" width="388" height="284.5"/>
-                                                <mutableString key="text">Instructions: To test and begin using Version 1 of the iOS Gesture Alphabet, hit the home button and select 'Ver. 1'. In order to use the interface, hit the button located at the bottom of the screen, and then hold down anywhere other than the button and any text field, and begin tilting! The two windows located at the top of the screen will assist you in understanding the orientation of your device, as well as the letter associated with the gesture percecived. While presenting the letter, stop "holding down" the interface in order to print the letter into the third window. The '?' button located in the top right will present the current letter to gesture mapping for all A-Z and 0-9.</mutableString>
+                                                <string key="text">Instructions: To test and begin using Version 1 of the iOS Gesture Alphabet, hit the home button and select 'Ver. 1'. In order to use the interface, hit the button located at the bottom of the screen, and then hold down anywhere other than the button and any text field, and begin tilting! The two windows located at the top of the screen will assist you in understanding the orientation of your device, as well as the letter associated with the gesture percecived. While presenting the letter, stop "holding down" the interface in order to print the letter into the third window. The '?' button located in the top right will present the current letter to gesture mapping for all A-Z and 0-9.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-se-5OK">
-                                                <rect key="frame" x="20" y="1398" width="388" height="365.5"/>
-                                                <mutableString key="text">Version 2 of the iOS Gesture Alphabet works by using the Accelerometer sensors included in Apple devices, in addition with CoreML, or Machine Learning, in order to encompass a wider, and even personal, set of gestures for users to map themselves. While a Version 2 remains on the app, this version is still in development. The team has conducted a mean and method of being able to acquire accelerometer-based motion data of specified gestures, and then train and test a machine learning model to differentiate between these gestures to produce, well, anything. An application like this could be mapped directly to letters, as seen in Version 1, but can be mapped to even larger, or different, outputs; such as whole words (as we see in many motions in sign language), or as musical octave/note interpretation.</mutableString>
+                                                <rect key="frame" x="20" y="1398" width="388" height="527.5"/>
+                                                <mutableString key="text">Version 2 of the iOS Gesture Alphabet works by using the Accelerometer sensors included in Apple devices, in addition with CoreML, or Machine Learning, in order to encompass a wider, and even personal, set of gestures for users to map themselves. While a Version 2 remains on the app, this version is still in development. The team has developed a method of being able to acquire accelerometer-based motion data of specified gestures over the period of time the user makes the gesture, and then train and test a machine learning model to differentiate between these gestures to produce, well, anything. An application like this could be mapped directly to letters, as seen in Version 1, but can be mapped to even larger, or different, outputs; such as whole words (as we see in many motions in sign language), or as musical octave/note interpretation. However, due to time constraints and limitations of data types accepted, the machine learning model could not be implemented into the app itself, and remains as future work of the project. We have left the current implementation of the accelerometer-based gesture capture within 'Ver. 2'; by pressing the button located at the bottom, you can view the different X-Y-Z accelerometer values</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Gesture Alphabet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovf-uc-FYH">
-                                                <rect key="frame" x="131.5" y="1853.5" width="165" height="21"/>
+                                                <rect key="frame" x="131.5" y="2015.5" width="165" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -107,6 +107,7 @@
                                             <constraint firstItem="z6G-fQ-KkG" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="7JH-8F-Dsp"/>
                                             <constraint firstItem="3G6-Uz-5ru" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="JMg-gE-i9i"/>
                                             <constraint firstItem="G1O-hL-Hnb" firstAttribute="centerX" secondItem="Y3a-xX-e2f" secondAttribute="centerX" id="KGg-hb-fDG"/>
+                                            <constraint firstItem="Ovf-uc-FYH" firstAttribute="bottom" secondItem="Y3a-xX-e2f" secondAttribute="bottom" constant="20" id="No4-BJ-fe0"/>
                                             <constraint firstItem="G1O-hL-Hnb" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="Nwq-hl-atX"/>
                                             <constraint firstAttribute="trailing" secondItem="G1O-hL-Hnb" secondAttribute="trailing" constant="20" id="QMd-21-igC"/>
                                             <constraint firstAttribute="trailing" secondItem="hdn-0b-W2b" secondAttribute="trailing" id="Y1F-1t-1S9"/>
@@ -123,7 +124,6 @@
                                             <constraint firstAttribute="trailing" secondItem="hdn-0b-W2b" secondAttribute="trailing" constant="20" id="rhU-t5-X6b"/>
                                             <constraint firstAttribute="trailing" secondItem="3G6-Uz-5ru" secondAttribute="trailing" constant="20" id="sfv-yB-o3V"/>
                                             <constraint firstItem="G1O-hL-Hnb" firstAttribute="top" secondItem="Y3a-xX-e2f" secondAttribute="top" constant="20" id="tVX-Bg-zuq"/>
-                                            <constraint firstAttribute="height" constant="1000" id="xIC-Ri-beT"/>
                                             <constraint firstItem="8K5-5e-94u" firstAttribute="top" secondItem="3G6-Uz-5ru" secondAttribute="bottom" constant="20" id="zGM-dm-Gvi"/>
                                             <constraint firstItem="jEf-se-5OK" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="zpE-nt-6Ai"/>
                                         </constraints>
@@ -144,8 +144,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BFV-zj-n97" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2n1-AB-cy4"/>
-                            <constraint firstItem="BFV-zj-n97" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HtT-V1-mdq"/>
-                            <constraint firstAttribute="bottom" secondItem="BFV-zj-n97" secondAttribute="bottom" id="XDN-LZ-7Yp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BFV-zj-n97" secondAttribute="trailing" id="HtT-V1-mdq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BFV-zj-n97" secondAttribute="bottom" constant="-20" id="XDN-LZ-7Yp"/>
                             <constraint firstItem="BFV-zj-n97" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nKq-5i-3yn"/>
                         </constraints>
                     </view>
@@ -157,7 +157,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="428" height="2400"/>
+                    <size key="freeformSize" width="428" height="2300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,8 +528,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-Zh-WPB">
-                                <rect key="frame" x="20" y="247" width="388" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-Zh-WPB">
+                                <rect key="frame" x="20" y="247" width="780" height="128"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="388" id="WR6-oA-ze3"/>
@@ -538,19 +538,45 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="388" id="qJD-gP-63B"/>
                                     <constraint firstAttribute="height" constant="128" id="x7C-Bi-1DO"/>
                                 </constraints>
-                                <string key="text">* Motion Data Gesture Alphabet
+                                <attributedString key="attributedText">
+                                    <fragment content="Motion Data Gesture Alphabet Instructions">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="systemBold" size="15"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 * Record motion data while touching the screen
 * Print letter after releasing from the screen.
-* More data: branch name= gestureconverter
+* "</string>
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="-&gt;&quot; indicates to move from the position before the arrow to the position after the arrow to complete the gesture.">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 * Positions that already visited will be ignored 
 (e.g: bottom-&gt;bottom_left-&gt;bottom  == bottom-&gt;bottom_left) (the second "bottom" is ignored.) 
 </string>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAj-Ns-hb0">
-                                <rect key="frame" x="20" y="875" width="388" height="64"/>
+                                <rect key="frame" x="20" y="875" width="780" height="64"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="0ys-gt-KnY"/>
@@ -567,8 +593,8 @@
                                     <action selector="closepopup:" destination="H69-5Q-RYs" eventType="touchUpInside" id="QRe-E9-w8G"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P9J-tc-WSv">
-                                <rect key="frame" x="20" y="383" width="388" height="462"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P9J-tc-WSv">
+                                <rect key="frame" x="20" y="383" width="780" height="462"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="388" id="EGP-3I-eHd"/>
@@ -577,48 +603,565 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="388" id="u9G-Sl-VVa"/>
                                     <constraint firstAttribute="height" constant="462" id="w9F-At-lA0"/>
                                 </constraints>
-                                <string key="text">A: bottom
-B: bottom -&gt; bottom_left
-C: bottom -&gt; bottom_right
-D: bottom_left
-E: bottom_left -&gt; left
-F: bottom_left -&gt; bottom
-G: left
-H: left -&gt; bottom_left
-I: left -&gt; top_left
-J: top_left
-K: top_left -&gt; left
-L: top_left -&gt; top
-M: top
-N: top -&gt; top_left
-O: top -&gt; top_right
-P: top_right
-Q: top_right -&gt; top
-R: top_right -&gt; right
-S: right
-T: right -&gt; top_right
-U: right -&gt; bottom_right
-V: bottom_right
-W: bottom_right -&gt; right
-X: bottom_right -&gt; bottom
-Y: bottom -&gt; bottom_left -&gt; bottom_right
-Z: bottom -&gt; bottom_right -&gt; bottom_left
-
-space: middle
-
-0: middle -&gt; bottom
-1: middle -&gt; bottom_left
-2: middle -&gt; left
-3: middle -&gt; top_left
-4: middle -&gt; top
-5: middle -&gt; top_right
-6: middle -&gt; right
-7: middle -&gt; bottom_right
-8: middle -&gt; bottom -&gt; bottom_left
-9: middle -&gt; bottom -&gt; bottom_right
+                                <attributedString key="attributedText">
+                                    <fragment content="A:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> bottom
 </string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="B:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> bottom -&gt; bottom_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="C:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> bottom -&gt; bottom_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="D:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> bottom_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="E: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">bottom_left -&gt; left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="F: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">bottom_left -&gt; bottom
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="G:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="H:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> left -&gt; bottom_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="I: l">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">eft -&gt; top_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="J: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">top_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="K:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> top_left -&gt; left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="L: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">top_left -&gt; top
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="M:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> top
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="N:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> top -&gt; top_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="O:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> top -&gt; top_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="P:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> top_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Q:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> top_right -&gt; top
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="R:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> top_right -&gt; right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="S:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="T: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">right -&gt; top_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="U:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> right -&gt; bottom_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="V: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">bottom_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="W">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">: bottom_right -&gt; right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="X:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> bottom_right -&gt; bottom
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Y: ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">bottom -&gt; bottom_left -&gt; bottom_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Z:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> bottom -&gt; bottom_right -&gt; bottom_left
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="space:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="0:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; bottom
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="1:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; bottom_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="2:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="3:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; top_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="4:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; top
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="5:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; top_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="6:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="7:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; bottom_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="8:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; bottom -&gt; bottom_left
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="9:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="systemBold" size="14"/>
+                                            <font key="NSOriginalFont" metaFont="systemBold" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> middle -&gt; bottom -&gt; bottom_right
+</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
