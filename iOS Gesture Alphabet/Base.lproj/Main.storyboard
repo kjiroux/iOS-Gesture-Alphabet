@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="iOS_Gesture_Alphabet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="1600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="2400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-zj-n97">
-                                <rect key="frame" x="0.0" y="102" width="428" height="1498"/>
+                                <rect key="frame" x="0.0" y="102" width="428" height="2298"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-xX-e2f">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="1000"/>
@@ -66,14 +66,21 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-0b-W2b">
-                                                <rect key="frame" x="20" y="1010.5" width="388" height="183"/>
-                                                <string key="text">Instructions: To test and begin using Version 1 of the iOS Gesture Alphabet, hit the home button and select 'Ver. 1'. In order to use the interface, hit the button located at the bottom of the screen, and then hold down anywhere other than the button and any text field, and begin tilting! The ___ window will display the projected letter to be selected, and by lifting up while in that position, will then print the letter into the third window.</string>
+                                                <rect key="frame" x="20" y="1010.5" width="388" height="284.5"/>
+                                                <mutableString key="text">Instructions: To test and begin using Version 1 of the iOS Gesture Alphabet, hit the home button and select 'Ver. 1'. In order to use the interface, hit the button located at the bottom of the screen, and then hold down anywhere other than the button and any text field, and begin tilting! The two windows located at the top of the screen will assist you in understanding the orientation of your device, as well as the letter associated with the gesture percecived. While presenting the letter, stop "holding down" the interface in order to print the letter into the third window. The '?' button located in the top right will present the current letter to gesture mapping for all A-Z and 0-9.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-se-5OK">
+                                                <rect key="frame" x="20" y="1398" width="388" height="365.5"/>
+                                                <mutableString key="text">Version 2 of the iOS Gesture Alphabet works by using the Accelerometer sensors included in Apple devices, in addition with CoreML, or Machine Learning, in order to encompass a wider, and even personal, set of gestures for users to map themselves. While a Version 2 remains on the app, this version is still in development. The team has conducted a mean and method of being able to acquire accelerometer-based motion data of specified gestures, and then train and test a machine learning model to differentiate between these gestures to produce, well, anything. An application like this could be mapped directly to letters, as seen in Version 1, but can be mapped to even larger, or different, outputs; such as whole words (as we see in many motions in sign language), or as musical octave/note interpretation.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6G-fQ-KkG">
-                                                <rect key="frame" x="20" y="1233.5" width="143.5" height="43"/>
+                                                <rect key="frame" x="20" y="1335" width="143.5" height="43"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Version 2">
                                                         <attributes>
@@ -86,9 +93,16 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Gesture Alphabet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovf-uc-FYH">
+                                                <rect key="frame" x="131.5" y="1853.5" width="165" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="jEf-se-5OK" firstAttribute="top" secondItem="z6G-fQ-KkG" secondAttribute="bottom" constant="20" id="1LH-ZZ-tpg"/>
                                             <constraint firstItem="Ats-c9-50f" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="3Dx-lR-Acu"/>
                                             <constraint firstItem="z6G-fQ-KkG" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="7JH-8F-Dsp"/>
                                             <constraint firstItem="3G6-Uz-5ru" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="JMg-gE-i9i"/>
@@ -97,17 +111,21 @@
                                             <constraint firstAttribute="trailing" secondItem="G1O-hL-Hnb" secondAttribute="trailing" constant="20" id="QMd-21-igC"/>
                                             <constraint firstAttribute="trailing" secondItem="hdn-0b-W2b" secondAttribute="trailing" id="Y1F-1t-1S9"/>
                                             <constraint firstItem="3G6-Uz-5ru" firstAttribute="top" secondItem="Ats-c9-50f" secondAttribute="bottom" constant="20" id="avl-hk-DCg"/>
+                                            <constraint firstItem="Ovf-uc-FYH" firstAttribute="centerX" secondItem="Y3a-xX-e2f" secondAttribute="centerX" id="bLg-U3-2eA"/>
                                             <constraint firstItem="hdn-0b-W2b" firstAttribute="top" secondItem="8K5-5e-94u" secondAttribute="bottom" constant="20" id="dqE-eO-uop"/>
+                                            <constraint firstAttribute="trailing" secondItem="jEf-se-5OK" secondAttribute="trailing" constant="20" id="ej6-tJ-jMu"/>
                                             <constraint firstItem="hdn-0b-W2b" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="fDK-OA-6gh"/>
                                             <constraint firstItem="8K5-5e-94u" firstAttribute="centerX" secondItem="Y3a-xX-e2f" secondAttribute="centerX" id="gel-QE-sDb"/>
                                             <constraint firstItem="Ats-c9-50f" firstAttribute="top" secondItem="G1O-hL-Hnb" secondAttribute="bottom" constant="40" id="hED-6I-9PN"/>
                                             <constraint firstItem="hdn-0b-W2b" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="jHj-kF-yRI"/>
+                                            <constraint firstItem="Ovf-uc-FYH" firstAttribute="top" secondItem="jEf-se-5OK" secondAttribute="bottom" constant="90" id="jTE-R2-ZmM"/>
                                             <constraint firstItem="z6G-fQ-KkG" firstAttribute="top" secondItem="hdn-0b-W2b" secondAttribute="bottom" constant="40" id="leT-ec-6QW"/>
                                             <constraint firstAttribute="trailing" secondItem="hdn-0b-W2b" secondAttribute="trailing" constant="20" id="rhU-t5-X6b"/>
                                             <constraint firstAttribute="trailing" secondItem="3G6-Uz-5ru" secondAttribute="trailing" constant="20" id="sfv-yB-o3V"/>
                                             <constraint firstItem="G1O-hL-Hnb" firstAttribute="top" secondItem="Y3a-xX-e2f" secondAttribute="top" constant="20" id="tVX-Bg-zuq"/>
                                             <constraint firstAttribute="height" constant="1000" id="xIC-Ri-beT"/>
                                             <constraint firstItem="8K5-5e-94u" firstAttribute="top" secondItem="3G6-Uz-5ru" secondAttribute="bottom" constant="20" id="zGM-dm-Gvi"/>
+                                            <constraint firstItem="jEf-se-5OK" firstAttribute="leading" secondItem="Y3a-xX-e2f" secondAttribute="leading" constant="20" id="zpE-nt-6Ai"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -139,11 +157,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="428" height="1600"/>
+                    <size key="freeformSize" width="428" height="2400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073.8317757009345" y="132.82937365010801"/>
+            <point key="canvasLocation" x="1073.4146341463415" y="132.71186440677968"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="lOm-dB-SsD">
