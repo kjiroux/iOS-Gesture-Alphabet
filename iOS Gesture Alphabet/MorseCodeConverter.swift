@@ -617,7 +617,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         var temp_letter = ""
         
         temp_letter += textField_letter.text!
-        temp_letter += self.presenter.text!
+        //temp_letter += self.presenter.text!
         textField_letter.text = temp_letter
         
         motion.stopAccelerometerUpdates()
