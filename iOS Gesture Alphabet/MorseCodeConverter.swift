@@ -257,7 +257,11 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 {
                     self.presenter.text = "top_right"
                 }
-                self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
+                if self.recordedgesture.isEmpty
+                {
+                    self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
+                }
+                //self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
                 
             }
         }

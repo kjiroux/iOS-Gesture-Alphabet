@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJR-ag-rGZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJR-ag-rGZ">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,7 +74,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-se-5OK">
                                                 <rect key="frame" x="20" y="1398" width="388" height="527.5"/>
-                                                <mutableString key="text">Version 2 of the iOS Gesture Alphabet works by using the Accelerometer sensors included in Apple devices, in addition with CoreML, or Machine Learning, in order to encompass a wider, and even personal, set of gestures for users to map themselves. While a Version 2 remains on the app, this version is still in development. The team has developed a method of being able to acquire accelerometer-based motion data of specified gestures over the period of time the user makes the gesture, and then train and test a machine learning model to differentiate between these gestures to produce, well, anything. An application like this could be mapped directly to letters, as seen in Version 1, but can be mapped to even larger, or different, outputs; such as whole words (as we see in many motions in sign language), or as musical octave/note interpretation. However, due to time constraints and limitations of data types accepted, the machine learning model could not be implemented into the app itself, and remains as future work of the project. We have left the current implementation of the accelerometer-based gesture capture within 'Ver. 2'; by pressing the button located at the bottom, you can view the different X-Y-Z accelerometer values</mutableString>
+                                                <string key="text">Version 2 of the iOS Gesture Alphabet works by using the Accelerometer sensors included in Apple devices, in addition with CoreML, or Machine Learning, in order to encompass a wider, and even personal, set of gestures for users to map themselves. While a Version 2 remains on the app, this version is still in development. The team has developed a method of being able to acquire accelerometer-based motion data of specified gestures over the period of time the user makes the gesture, and then train and test a machine learning model to differentiate between these gestures to produce, well, anything. An application like this could be mapped directly to letters, as seen in Version 1, but can be mapped to even larger, or different, outputs; such as whole words (as we see in many motions in sign language), or as musical octave/note interpretation. However, due to time constraints and limitations of data types accepted, the machine learning model could not be implemented into the app itself, and remains as future work of the project. We have left the current implementation of the accelerometer-based gesture capture within 'Ver. 2'; by pressing the button located at the bottom, you can view the different X-Y-Z accelerometer values</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1204,12 +1204,6 @@
         <image name="profile" width="24" height="24"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="record.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
