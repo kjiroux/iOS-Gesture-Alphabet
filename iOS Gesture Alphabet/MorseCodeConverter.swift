@@ -257,7 +257,11 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
                 {
                     self.presenter.text = "top_right"
                 }
-                self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
+                if self.recordedgesture.isEmpty
+                {
+                    self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
+                }
+                //self.expectedoutput.text = self.initial_gesture(self.presenter.text!)
                 
             }
         }
@@ -416,11 +420,11 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             {
                 return "F"
             }
-            else if array[0] == "left" && array[1] == "top_left"
+            else if array[0] == "left" && array[1] == "bottom_left"
             {
                 return "H"
             }
-            else if array[0] == "left" && array[1] == "bottom_left"
+            else if array[0] == "left" && array[1] == "top_left"
             {
                 return "I"
             }
@@ -613,7 +617,7 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         var temp_letter = ""
         
         temp_letter += textField_letter.text!
-        temp_letter += self.presenter.text!
+        //temp_letter += self.presenter.text!
         textField_letter.text = temp_letter
         
         motion.stopAccelerometerUpdates()
