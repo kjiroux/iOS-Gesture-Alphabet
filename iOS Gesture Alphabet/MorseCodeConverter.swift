@@ -420,11 +420,11 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
             {
                 return "F"
             }
-            else if array[0] == "left" && array[1] == "top_left"
+            else if array[0] == "left" && array[1] == "bottom_left"
             {
                 return "H"
             }
-            else if array[0] == "left" && array[1] == "bottom_left"
+            else if array[0] == "left" && array[1] == "top_left"
             {
                 return "I"
             }
