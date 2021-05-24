@@ -295,12 +295,28 @@ class MorseCodeConverter: UIViewController, UITextFieldDelegate {
         self.view.addSubview(self.textField_letter)
         
         
+        // Motion Shaking
+        self.becomeFirstResponder()
+        
         // long press button
         let longbutton = UILongPressGestureRecognizer(target: self, action: #selector(readinggesture(press:)))
         longbutton.minimumPressDuration = 0.5
         self.view.addGestureRecognizer(longbutton)
         
         
+    }
+    
+    // Motion Shaking - for deleting one letter by shaking a device
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            let temp_str = textField_letter.text
+            textField_letter.text = String(temp_str!.dropLast())
+        }
     }
     
     //dupicated value remove
